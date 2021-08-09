@@ -1,0 +1,86 @@
+#################### default parameters ################################
+# favicon
+favicon = "images/favicon.png"
+# logo
+logo = "images/logo.svg"
+# use `x` with logo_width, example: "100x"
+logo_width = "240x"
+# logo text will only show when logo is missing.
+logo_text = "Andromeda"
+# OpenGraph / Twitter Card metadata
+description = "This is meta description"
+author = "Themefisher"
+image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
+
+# footer information
+footer_info = "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat."
+
+# contact form action
+contact_form_action = "https://formspree.io/f/xgernlzd" # contact form works with https://formspree.io
+
+# copyright
+copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
+
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
+custom_script= "" 
+
+# Main Sections
+mainSections= ["blog"]
+
+# contact information
+[contact_info]
+address = "2118 Thornridge Cir. Syracuse, Connecticut 35624"
+phone = ["+704-555-0127", "+205-857-2321", "+002-569-6969"]
+email = ["info@andromeda.io", "smith@anderson.io", "john@anderson.io"]
+
+# imaging processing
+[imaging]
+# Default JPEG or WebP quality setting. Default is 100.
+quality = 100
+
+# Preloader
+[preloader]
+enable = true
+preloader = "images/favicon.png" # use jpg, png, svg or gif format.
+
+# Navigation button
+[navigation_button]
+enable = true
+label = "Buy Premium"
+link = "https://gethugothemes.com/products/andromeda/"
+
+# cookies
+[cookies]
+enable = false
+expire_days = 2
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+button = "I Accept"
+
+# call-to-action
+[cta]
+enable = true
+title = "Get Andromeda-Premium Now"
+content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin."
+button = "Download The Theme"
+button_link = "https://gethugothemes.com/products/andromeda/"
+
+############################# social site ########################
+[[social]]
+title = "Andromeda"
+icon = "lab la-facebook-f" # https://icons8.com/line-awesome
+link = "#!"
+
+[[social]]
+title = "AndromedaTweet"
+icon = "lab la-twitter" # https://icons8.com/line-awesome
+link = "#!"
+
+[[social]]
+title = "AndromedaIn"
+icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
+link = "#!"
+
+[[social]]
+title = "AndromedaPin"
+icon = "lab la-pinterest" # https://icons8.com/line-awesome
+link = "#!"

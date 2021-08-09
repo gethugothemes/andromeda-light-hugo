@@ -1,0 +1,76 @@
+<!-- navigation -->
+<div class="header-height-fix"></div>
+<header class="header-nav">
+  <div class="container-xxl">
+     <div class="row">
+        <div class="col-12">
+           <nav class="navbar navbar-expand-lg navbar-light p-0">
+              <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
+                {{ $logo:= site.Params.logo }}
+                {{ if fileExists (add `assets/` $logo) }}
+                {{ $logo:= resources.Get $logo }}
+                <img loading="prelaod" decoding="async" class="img-fluid" width="{{site.Params.logo_width}}" height="45" src="{{$logo.RelPermalink}}" alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{$logo.RelPermalink}}'">
+                {{ else }}
+                {{site.Params.logo_text | markdownify}}
+                {{ end }}
+              </a>
+
+              <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navHeader" aria-controls="navHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="d-inline lab la-buromobelexperte"></i>
+                <i class="d-none las la-times"></i>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navHeader">
+                <ul class="navbar-nav mx-auto">
+
+                  <li class="nav-item {{if .IsHome}}active{{end}}">
+                    <a class="nav-link" href="{{ site.BaseURL | relLangURL }}">Home</a>
+                  </li>
+                  
+                  {{ $currentPage := . }}
+                  {{ range site.Menus.main }}
+
+                  {{ $menu_item_url := .URL | absLangURL }}
+                  {{ $page_url:= $currentPage.Permalink | absLangURL }}
+                  {{ $active := eq $menu_item_url $page_url}}
+                  
+                  {{ if .HasChildren }}
+                  <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{ .Name }}
+                    </a>
+                    <ul class="dropdown-menu">
+                      {{ range .Children }}
+
+                      {{ $drop_menu_item_url := .URL | absLangURL }}
+                      {{ $active := eq $drop_menu_item_url $page_url}}
+
+                      <li>
+                        <a class="dropdown-item {{if $active}}active{{end}}" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+                        href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+                      </li>
+                      {{ end }}
+                    </ul>
+                  </li>
+                  {{ else }}
+                  <li class="nav-item {{if $active}}active{{end}}">
+                    <a class="nav-link" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+                      href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+                  </li>
+                  {{ end }}
+                  {{ end }}
+                </ul>
+        
+                <div class="navbar-right">
+                  {{ if site.Params.navigation_button.enable }}
+                  <a href="{{ site.Params.navigation_button.link | relURL }}" class="btn btn-primary">{{ site.Params.navigation_button.label }}</a>
+                  {{ end }}
+                </div>
+              </div>
+          </nav>
+        </div>
+     </div>
+  </div>
+</header>
+<!-- /navigation -->

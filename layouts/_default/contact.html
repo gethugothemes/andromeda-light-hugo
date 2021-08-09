@@ -1,0 +1,125 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" . }}
+
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5 col-md-8 text-center mb-5 mb-lg-0" data-aos="fade-up">
+        <div class="pr-0 pr-lg-5">
+          {{ if fileExists (add `assets/` .Params.contact_image) }}
+          {{$img:= resources.Get .Params.contact_image }}
+          {{$img:= $img.Resize "575x"}}
+          <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="cobtact image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{end}}
+        </div>
+      </div>
+      {{with site.Params.contact_form_action}}
+      <div class="col-lg-5 col-md-10" data-aos="fade-up">
+        <div class="contact-form">
+          <div class="mb-4">
+            <h3>Send A Message</h3>
+          </div>
+          <form id="contact-form" action="{{.}}" method="POST">
+            <p id="form-status" class="form-status"></p>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input class="form-control shadow-none" id="name" name="full_name" type="text" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input class="form-control shadow-none" id="email" name="email" type="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea class="form-control shadow-none" id="message" name="Comment" rows="4" required></textarea>
+            </div>
+
+            <button class="btn btn-primary w-100 mt-4" type="submit" aria-label="Send Message">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <script>
+        var form = document.getElementById('contact-form');
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+      </script>
+      {{end}}
+    </div>
+
+    <div class="section pb-0">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="section-title text-center" data-aos="fade-up">
+            <p class="text-uppercase">Contact us</p>
+            <h2 class="title">Get In Touch</h2>
+          </div>
+        </div>
+
+        {{with site.Params.contact_info.phone}}
+        <div class="col-xl-3 col-lg-4 col-md-6 contact-widget" data-aos="fade-up">
+          <div class="block text-center">
+            <h3 class="mb-4">Phone</h3>
+            <ul class="list-unstyled">
+              {{range .}}
+              {{if .}}
+              <li><a href="tel:{{.}}"><i class="las la-phone"></i>{{.}}</a></li>
+              {{end}}
+              {{end}}
+            </ul>
+          </div>
+        </div>
+        {{end}}
+
+        {{with site.Params.contact_info.email}}
+        <div class="col-xl-3 col-lg-4 col-md-6 contact-widget" data-aos="fade-up" data-aos-delay="100">
+          <div class="block text-center">
+            <h3 class="mb-4">Email Address</h3>
+            <ul class="list-unstyled">
+              {{range .}}
+              {{if .}}
+              <li><a href="mailto:{{.}}"><i class="las la-envelope-open-text"></i>{{.}}</a></li>
+              {{end}}
+              {{end}}
+            </ul>
+          </div>
+        </div>
+        {{end}}
+
+        {{with site.Params.social}}
+        <div class="col-xl-3 col-lg-4 col-md-12 contact-widget" data-aos="fade-up" data-aos-delay="200">
+          <div class="block text-center">
+            <h3 class="mb-4">Social Media</h3>
+            <ul class="list-unstyled">
+              {{range .}}
+              {{if .}}
+              <li><a href="{{.link}}"><i class="{{.icon}}"></i>{{.title}}</a></li>
+              {{end}}
+              {{end}}
+            </ul>
+          </div>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

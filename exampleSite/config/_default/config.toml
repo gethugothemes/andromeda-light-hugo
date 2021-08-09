@@ -1,0 +1,46 @@
+######################## default configuration ####################
+baseURL = "https://demo.gethugothemes.com/andromeda-light/"
+title = "Andromeda-light - Software and SAAS Landing Hugo Theme"
+theme = "andromeda-light"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "10"
+# google analytics
+googleAnalytics = "" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
+# disqus short name
+disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
+
+
+############################# Outputs ##############################
+[outputs]
+home = ["HTML", "RSS", "WebAppManifest"]
+
+[imaging]
+quality = 100
+
+[caches]
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[caches.assets]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[markup]
+[markup.goldmark.renderer]
+unsafe= true
+
+[mediaTypes]
+[mediaTypes."application/manifest+json"]
+suffixes = ["webmanifest"]
+
+[mediaTypes."text/netlify"]
+delimiter = ""
+suffixes = [""]
+
+[outputFormats]
+[outputFormats.WebAppManifest]
+mediaType = "application/manifest+json"
+rel = "manifest"

@@ -1,0 +1,33 @@
+// Color Variables
+{{ with site.Params.variables }}
+$white: {{.white | default "#ffffff"}};
+$black: {{.black | default "#000000"}};
+$light: {{.light | default "#FAFAFA"}};
+$primary-color: {{.primary_color | default "#FE6019"}};
+
+
+// Font Variables
+$h1: {{.h1 | default "48px"}};
+$h1-md: {{.h1_md | default "38px"}};
+$h2: {{.h2 | default "38px"}};
+$h2-md: {{.h2_md | default "30px"}};
+$h3: {{.h3 | default "22px"}};
+$h3-md: {{.h3_md | default "20px"}};
+$h4: {{.h4 | default "18px"}};
+$h5: {{.h5 | default "16px"}};
+$h6: {{.h6 | default "15px"}};
+
+// Font Variables
+$primary-font: '{{ replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .primary_font | default "Lato"}}', {{.primary_font_type | default "sans-serif"}};
+$secondary-font: '{{ replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .secondary_font | default "Lato"}}', {{.secondary_font_type | default "sans-serif"}};
+$icon-font: '{{.icon_font | default "Font Awesome 5 Free"}}';
+{{ end }}
+
+
+@import 'mixins';
+@import 'typography';
+@import 'buttons';
+@import 'common';
+@import 'templates/navigation.scss';
+@import 'templates/main.scss';
+@import 'custom.scss';

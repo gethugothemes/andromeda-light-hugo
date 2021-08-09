@@ -1,0 +1,512 @@
+body {
+  color: lighten($black, 53.33);
+  background-color: $white;
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+::selection {
+  color: $white;
+  background-color: darken($primary-color, 5);
+  text-shadow: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+/*------------------------------------------------------------------
+ # default styles
+-------------------------------------------------------------------*/
+@media (min-width: 992px) {
+  .container {
+    max-width: 1060px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1260px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+
+.container-xxl {
+  max-width: 1440px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include desktop-xl {
+    max-width: 1260px;
+  }
+}
+
+.section {
+  padding: 100px 0;
+
+  &-sm {
+    padding: 70px 0;
+  }
+}
+
+.section-title {
+  margin-bottom: 50px;
+
+  .title {
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    position: relative;
+    line-height: 1.3;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 5px;
+      width: 70px;
+      border-radius: 30px;
+      left: 0;
+      bottom: -20px;
+      background-color: $primary-color;
+    }
+
+    &.underline-none {
+      margin-bottom: 20px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      font-size: 32px;
+    }
+  }
+
+  &.text-center .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+// swiper
+.swiper-wrapper {
+  cursor: grab;
+  transition-timing-function: cubic-bezier(.165, .84, .44, 1) !important;
+}
+
+.swiper-pagination-bullet {
+  height: 15px;
+  width: 15px;
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary-color !important;
+}
+
+
+// aos background animation
+.has-bg-anim {
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    background-color: lighten($primary-color, 83);
+    transform: scale(0);
+    border-radius: 30px;
+    transition: 1.5s cubic-bezier(.105, .84, .44, 1);
+  }
+
+  &.aos-animate::before {
+    transform: scale(1);
+    background-color: lighten($primary-color, 43);
+  }
+}
+
+
+// social-links
+.social-links {
+  a {
+    font-size: 18px;
+    color: rgba($black, .8);
+    border: 1px solid #eee;
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 35px;
+
+    &:hover {
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+}
+
+
+// has-circle
+.has-circle {
+  position: relative;
+
+  span {
+    position: absolute;
+    background-color: lighten(saturate($primary-color, 0.87), 38.24);
+    border-radius: 50%;
+
+    &.fill {
+      background-color: $primary-color;
+      opacity: .9
+    }
+
+    &.ratio-20 {
+      height: 20px;
+      width: 20px
+    }
+
+    &.ratio-32 {
+      height: 32px;
+      width: 32px
+    }
+
+    &.ratio-37 {
+      height: 37px;
+      width: 37px
+    }
+
+    &.ratio-47 {
+      height: 47px;
+      width: 47px
+    }
+
+    &.ratio-62 {
+      height: 62px;
+      width: 62px
+    }
+
+    &.ratio-65 {
+      height: 65px;
+      width: 65px
+    }
+
+    &.ratio-73 {
+      height: 73px;
+      width: 73px
+    }
+
+    &.ratio-85 {
+      height: 85px;
+      width: 85px
+    }
+  }
+}
+
+
+// preloader
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+  z-index: 999889898;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .la-spin {
+    animation: la-spin .5s infinite linear;
+  }
+}
+
+// link-primary
+.link-primary {
+  color: $primary-color;
+
+  &:hover {
+    color: darken($primary-color, 5);
+    text-decoration: underline;
+  }
+}
+
+.badge {
+  color: $white !important;
+  font-size: 12px;
+  font-weight: 600;
+  padding: .45em .8em;
+  border-radius: 4px;
+  position: relative;
+  top: 10px;
+
+  &.badge-changed {
+    background-color: #3A9CFF
+  }
+
+  &.badge-added {
+    background-color: #00CE92
+  }
+
+  &.badge-removed {
+    background-color: #973CFF
+  }
+
+  &.badge-security {
+    background-color: #9C275F
+  }
+
+  &.badge-depreciate {
+    background-color: #FF3158
+  }
+}
+
+// content
+.lead {
+  font-size: 1.5rem;
+  font-weight: inherit;
+}
+
+.content {
+  font-size: 15px;
+
+  a {
+    color: #888;
+    text-decoration: underline;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  blockquote p {
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+  figure {
+    margin-bottom: 30px;
+    img {
+      margin-bottom: 0;
+    }
+    figcaption {
+      text-align: center;
+    }
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  ol,
+  ul {
+    margin-bottom: 25px;
+    padding-left: 5px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 7px;
+        width: 7px;
+        background-color: rgba($primary-color, .8);
+        top: 10px;
+        left: 0;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  blockquote {
+    padding: 20px 40px;
+    padding-top: 10px;
+    color: lighten($black, 20.00);
+    font-weight: 500;
+    font-size: 20px;
+    margin: 38px 0;
+    border-radius: 18px;
+    box-shadow: 0px 10px 35px 0px rgba($black, 0.05);
+    position: relative;
+    border: 1px solid #fbf2e5;
+
+    &::before {
+      font-family: 'Line Awesome Free';
+      font-weight: 900;
+      content: "\f10d";
+      font-size: 56px;
+      display: block;
+      line-height: 1.2;
+      color: #c3c3c3;
+    }
+
+    cite {
+      border-top: 1px solid #fbf2e5;
+      display: block;
+      font-size: 16px;
+      opacity: .7;
+      margin-top: 20px;
+      padding-top: 15px;
+      font-weight: 400;
+      font-style: unset;
+    }
+  }
+}
+
+// pagination
+.pagination {
+  .page-link {
+    padding: 0;
+    margin-left: 0;
+    border: 0;
+    height: 46px;
+    width: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px !important;
+    color: $primary-color;
+    margin: 0 2px;
+
+    &.arrow {
+      font-size: 22px;
+      background-color: transparent;
+    }
+
+    &.active,
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+}
+
+
+// form-control
+.form-control {
+  border: 0;
+  padding: 20px;
+  border: 2px solid lighten(saturate(adjust-hue($primary-color, 16), 0), 42.94);
+  border-left-color: lighten($primary-color, 20);
+  height: 56px;
+  transition: .3s ease;
+  background-color: lighten(saturate(adjust-hue($primary-color, 16), 0), 42.94);
+
+  &:focus {
+    box-shadow: none;
+    color: lighten($black, 20.00);
+    border-bottom-color: lighten($black, 20.00);
+    border-color: lighten($primary-color, 20);
+  }
+}
+
+.form-control[type="file"] {
+  padding: 11px 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+form label {
+  font-weight: 600;
+  color: lighten($black, 33.33);
+}
+
+.custom-checkbox {
+  margin-top: 15px;
+
+  .custom-control-label::before {
+    border-radius: 0;
+  }
+
+  .custom-control-input:checked~.custom-control-label::before,
+  .custom-control-input:not(:disabled):active~.custom-control-label::before {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    box-shadow: none;
+  }
+
+  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+    box-shadow: none;
+    border-color: $primary-color;
+  }
+
+  .custom-control-input:disabled:checked~.custom-control-label::before {
+    background-color: rgba($primary-color, .5);
+    border-color: rgba($primary-color, .2);
+  }
+}
+
+/*------------------------------------------------------------------
+ # helper classes
+-------------------------------------------------------------------*/
+.primary-font {
+  font-family: $primary-font
+}
+
+.font-weight-400 {
+  font-weight: 400
+}
+
+.font-weight-500 {
+  font-weight: 500
+}
+
+.font-weight-600 {
+  font-weight: 600
+}
+
+.text-primary {
+  color: $primary-color !important
+}
+
+a.text-primary:hover {
+  color: darken($primary-color, 10) !important
+}
+
+.bg-primary {
+  background-color: $primary-color !important
+}
+
+.bg-light {
+  background-color: $light !important
+}
+
+.border-primary {
+  border-color: $primary-color !important
+}

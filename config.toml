@@ -1,0 +1,59 @@
+# This file is for render site varibles and plugins
+# don't remove this file.
+# The presence of this file is for compatibility with Blogdown and Forestry.
+#
+# The actual configuration files are stored in the `config/_default/` folder.
+
+
+######################### site variables ##############################
+# customize your color and font from here.
+[params.variables]
+white = "#ffffff"
+black = "#000000"
+light = "#FAFAFA"
+primary_color = "#FE6019"
+
+# font variable
+h1 = "48px"
+h1_md = "38px"
+h2 = "38px"
+h2_md = "30px"
+h3 = "22px"
+h3_md = "20px"
+h4 = "18px"
+h5 = "16px"
+h6 = "15px"
+# Give your font name from google font. add font weight using ":wght@" and separate by ";"
+# example: "Work Sans:wght@400;500;600"
+primary_font = "Poppins:wght@400;500;600"
+primary_font_type = "sans-serif" # [serif/sans-serif]
+secondary_font = ""
+secondary_font_type = "" # [serif/sans-serif]
+icon_font = "Line Awesome Free"
+
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/line-awesome/css/line-awesome.min.css"
+[[params.plugins.css]]
+link = "plugins/swiper/swiper-bundle.min.css"
+[[params.plugins.css]]
+link = "plugins/aos/aos.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/aos/aos.js"
+[[params.plugins.js]]
+link = "plugins/swiper/swiper-bundle.min.js"
+[[params.plugins.js]]
+link = "plugins/rellax/rellax.min.js"
+[[params.plugins.js]]
+link = "plugins/webfont-loader/webfont-loader-2.min.js"

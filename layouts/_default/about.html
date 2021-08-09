@@ -1,0 +1,281 @@
+{{define "main"}}
+
+{{ partial "page-header.html" . }}
+
+{{with .Params.who_we_are}}
+{{if .enable}}
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="section-title">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title">{{.title | markdownify}}</h2>
+          <p>{{.description | markdownify}}</p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="about-image">
+          <div class="block">
+            {{ if fileExists (add `assets/` .image) }}
+            {{$img:= resources.Get .image }}
+            {{$img:= $img.Resize "464x"}}
+            <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="Video Thumbnail" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+            {{end}}
+
+            <div class="has-circle">
+              <span class="circle-4 ratio-20 fill"></span>
+              <span class="circle-5 ratio-47"></span>
+            </div>
+          </div>
+
+          <div class="has-circle">
+            <span class="circle-1 ratio-85 fill"></span>
+            <span class="circle-2 ratio-37"></span>
+            <span class="circle-3 ratio-20 fill"></span>
+            <span class="circle-6 ratio-85 fill"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.what_we_do}}
+{{if .enable}}
+<section data-aos="fade-in">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="section-title text-center">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title">{{.title | markdownify}}</h2>
+        </div>
+      </div>
+
+      {{range .block}}
+      <div class="col-xl-5 col-lg-6">
+        <div class="text-center px-0 px-md-5 mt-4">
+          <h3 class="text-capitalize">{{.title | markdownify}}</h3>
+          <p>{{.content | markdownify}}</p>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.our_mission}}
+{{if .enable}}
+<section class="section-sm">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-5 col-md-6" data-aos="fade-up">
+        <div class="about-image">
+          <div class="block">
+            {{ if fileExists (add `assets/` .image) }}
+            {{$img:= resources.Get .image }}
+            {{$img:= $img.Resize "4645x"}}
+            <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="Video Thumbnail" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+            {{end}}
+
+            <div class="has-circle">
+              <span class="circle-4 ratio-20 fill"></span>
+              <span class="circle-5 ratio-47"></span>
+            </div>
+          </div>
+
+          <div class="has-circle">
+            <span class="circle-1 ratio-85 fill"></span>
+            <span class="circle-2 ratio-37"></span>
+            <span class="circle-3 ratio-20 fill"></span>
+            <span class="circle-6 ratio-85 fill"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="section-title">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title">{{.title | markdownify}}</h2>
+          <p>{{.description | markdownify}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.about_video}}
+{{if .enable}}
+<section class="video-popup video-popup-two has-bg-color">
+  <div class="container-xxl">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="block">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5">
+              <div class="section-title" data-aos="fade-up">
+                <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+                <h2 class="title">{{.title | markdownify}}</h2>
+                <p>{{.description | markdownify}}</p>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="has-video-popup" data-aos="fade-up" data-aos-delay="100">
+                <button type="button" class="video-play-btn" data-src="{{.video_url}}">
+                  <i class="las la-play"></i>
+                </button>
+                {{ if fileExists (add `assets/` .video_thumbnail) }}
+                {{$img:= resources.Get .video_thumbnail }}
+                {{$img:= $img.Resize "700x "}}
+                {{$imgWebp:= $img.Resize "700x webp"}}
+                <img loading="lazy" decoding="async" class="img-fluid video-thumb" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Video Thumbnail" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+                {{end}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="has-circle has-bg-anim" data-aos="fade-in">
+          <span class="circle-1 ratio-32"></span>
+          <span class="circle-2 ratio-20"></span>
+          <span class="circle-3 ratio-20"></span>
+          <span class="circle-4 ratio-20"></span>
+          <span class="circle-5 ratio-37"></span>
+          <span class="circle-6 ratio-20"></span>
+          <span class="circle-7 ratio-47"></span>
+          <span class="circle-8 ratio-37"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.brands_carousel}}
+{{if .enable}}
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title text-center" data-aos="fade-in">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title">{{.title | markdownify}}</h2>
+        </div>
+      </div>
+      {{with site.GetPage (string .Params.clients.section)}}
+      {{with .Params.brands_carousel}}
+      <div class="col-md-12" data-aos="fade-left">
+        <div class="brand-carousel swiper-container border-0 mt-0">
+          <div class="swiper-wrapper">
+            {{range .brand_images}}
+            {{ if fileExists (add `assets/` .) }}
+            <div class="swiper-slide">
+              <div class="brand-item">
+                {{$img:= resources.Get . }}
+                {{$img_width := $img.Width }}
+
+                {{$img_orginal := add (add (string $img_width) "x") " " }}
+                {{$img_src := ($img.Resize $img_orginal).RelPermalink }}
+
+                {{$imgWebp := add (add (string $img_width) "x") " webp" }}
+                {{$imgWebp_src := ($img.Resize $imgWebp).RelPermalink }}
+                <img loading="lazy" decoding="async" class="img-fluid" width="{{$img_width}}" height="{{$img.Height}}" src="{{$imgWebp_src}}" alt="Brand Image" onerror="this.onerror=null;this.src='{{$img_src}}'">
+              </div>
+            </div>
+            {{end}}
+            {{end}}
+          </div>
+        </div>
+      </div>
+      {{end}}
+      {{end}}
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.our_team}}
+{{if .enable}}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title text-center" data-aos="fade-in">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title">{{.title | markdownify}}</h2>
+          <p>{{.description | markdownify}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-around">
+      {{range .team}}
+      <div class="col-lg-3 col-md-4 col-6">
+        <div class="team-item text-center">
+          <div class="team-image">
+            {{ if fileExists (add `assets/` .image) }}
+            {{$img:= resources.Get .image }}
+            {{$img:= $img.Resize "175x "}}
+            {{$imgWebp:= $img.Resize "175x webp"}}
+            <img loading="lazy" decoding="async" class="w-100 img-fluid rounded-circle" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Team Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+            {{end}}
+          </div>
+          <h3>{{.name | markdownify}}</h3>
+          <p>{{.designation | markdownify}}</p>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.our_office}}
+{{if .enable}}
+<section class="section-sm mb-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-8 col-md-10">
+        <div class="section-title text-center mb-0" data-aos="fade-in">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title">{{.title | markdownify}}</h2>
+          <p>{{.description | markdownify}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-xl-10">
+        <div class="row">
+          {{range .office_locations}}
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="office-loc-item">
+              {{ if fileExists (add `assets/` .country_flag) }}
+              {{$img:= resources.Get .country_flag }}
+              {{$img:= $img.Resize "80x "}}
+              {{$imgWebp:= $img.Resize "80x webp"}}
+              <img loading="lazy" decoding="async" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Flags" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+              {{end}}
+              <h3>{{.city | markdownify}}</h3>
+              <p>{{.address_line_one | markdownify}}</p>
+              <p>{{.address_line_two | markdownify}}</p>
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{end}}

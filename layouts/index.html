@@ -1,0 +1,261 @@
+{{define "main"}}
+
+{{with .Params.banner}}
+<section class="banner">
+  <div class="container-xxl">
+    <div class="row text-center">
+      <div class="col-12">
+        <div class="block row justify-content-center no-gutters" data-aos="fade-up">
+          <div class="col-lg-10 px-0 px-xl-4" data-rellax-speed="-3">
+            <h1 class="mb-4" data-aos="fade-up">{{.title | markdownify}}</h1>
+            <a href="{{.button_link}}" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">{{.button}}</a>
+          </div>
+        </div>
+
+        {{with .image}}
+        <div class="banner-image" data-aos="fade-up" data-aos-delay="300">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              {{$img:= resources.Get . }}
+              {{$img:= $img.Resize "1240x webp"}}
+              <img loading="lazy" decoding="async" class="w-100 img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="Banner Image">
+            </div>
+          </div>
+        </div>
+        {{end}}
+
+        <div class="has-circle">
+          <span class="circle-1 ratio-32" data-rellax-speed="-2"></span>
+          <span class="circle-2 ratio-85 fill" data-rellax-speed="2"></span>
+          <span class="circle-3 ratio-20 fill"></span>
+          <span class="circle-4 ratio-47" data-rellax-speed="1"></span>
+          <span class="circle-5 ratio-62" data-rellax-speed="-1"></span>
+          <span class="circle-6 ratio-20 fill" data-rellax-speed="-0.5"></span>
+          <span class="circle-7 ratio-73" data-rellax-speed="-1"></span>
+          <span class="circle-8 ratio-37" data-rellax-speed="-.5"></span>
+          <span class="circle-9 ratio-20 fill" data-rellax-speed="1"></span>
+          <span class="circle-10 ratio-65 fill" data-rellax-speed="-2"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+
+{{with .Params.brands_carousel}}
+{{if .enable}}
+<section class="overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" data-aos="fade-left">
+        <div class="brand-carousel swiper-container">
+          <div class="swiper-wrapper">
+            {{range .brand_images}}
+            {{ if fileExists (add `assets/` .) }}
+            <div class="swiper-slide">
+              <div class="brand-item">
+                {{$img:= resources.Get . }}
+                {{$img_width := $img.Width }}
+
+                {{$img_orginal := add (add (string $img_width) "x") " " }}
+                {{$img_src := ($img.Resize $img_orginal).RelPermalink }}
+
+                {{$imgWebp := add (add (string $img_width) "x") " webp" }}
+                {{$imgWebp_src := ($img.Resize $imgWebp).RelPermalink }}
+                <img loading="lazy" decoding="async" class="img-fluid" width="{{$img_width}}" height="{{$img.Height}}" src="{{$imgWebp_src}}" alt="Brand Image" onerror="this.onerror=null;this.src='{{$img_src}}'">
+              </div>
+            </div>
+            {{end}}
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.features}}
+{{if .enable}}
+<section class="section features overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12" data-aos="fade-up">
+        <div class="section-title text-center">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title">{{.title | markdownify}}</h2>
+          <p>{{.description | markdownify}}</p>
+        </div>
+      </div>
+    </div>
+
+    {{with .features_blocks}}
+    <div class="row">
+      <div class="col-lg-12" data-aos="fade-left" data-aos-delay="200">
+        <div class="features-carousel swiper-container">
+          <div class="swiper-wrapper align-items-center">
+            {{range .}}
+            <div class="swiper-slide">
+              <div class="features-card">
+                <div class="icon text-primary">
+                  <i class="{{.icon}}"></i>
+                </div>
+                <h3 class="title">{{.title | markdownify}}</h3>
+                <p class="mb-0">{{.content | markdownify}}</p>
+              </div>
+            </div>
+            {{end}}
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.intro_video}}
+{{if .enable}}
+<section class="video-popup has-bg-color">
+  <div class="container-xxl">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="block">
+          <div class="section-title text-center" data-aos="fade-up">
+            <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+            <h2 class="title">{{.title | markdownify}}</h2>
+            <p>{{.description | markdownify}}</p>
+          </div>
+
+          <div class="has-video-popup" data-aos="fade-up" data-aos-delay="100">
+            <button type="button" class="video-play-btn" data-src="{{.video_url}}">
+              <i class="las la-play"></i>
+            </button>
+            {{ if fileExists (add `assets/` .video_thumbnail) }}
+            {{$img:= resources.Get .video_thumbnail }}
+            {{$img:= $img.Resize "700x "}}
+            {{$imgWebp:= $img.Resize "700x webp"}}
+            <img loading="lazy" decoding="async" class="img-fluid video-thumb" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Video Thumbnail" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+            {{end}}
+          </div>
+        </div>
+
+        <div class="has-circle has-bg-anim" data-aos="fade-in">
+          <span class="circle-1 ratio-32"></span>
+          <span class="circle-2 ratio-85 fill"></span>
+          <span class="circle-3 ratio-20 fill"></span>
+          <span class="circle-4 ratio-47"></span>
+          <span class="circle-5 ratio-62"></span>
+          <span class="circle-6 ratio-20 fill"></span>
+          <span class="circle-7 ratio-73"></span>
+          <span class="circle-8 ratio-37"></span>
+          <span class="circle-9 ratio-20 fill"></span>
+          <span class="circle-10 ratio-65 fill"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.how_it_works}}
+{{if .enable}}
+<section class="section-sm">
+  <div class="container">
+    {{ $.Scratch.Set "counter" 0 }}
+    {{range .block}}
+    {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+    {{$n := $.Scratch.Get "counter"}}
+    <div class="row justify-content-center align-items-center mb-4">
+      <div class="col-lg-5 {{if (modBool $n 2)}} order-md-1 {{end}}" data-aos="fade-up">
+        <div class="section-title mb-0">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title text-break">{{.title | markdownify}}</h2>
+          <p>{{.description | markdownify}}</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="pl-0 pl-lg-3">
+          {{ if fileExists (add `assets/` .image) }}
+          {{$img:= resources.Get .image }}
+          {{$img:= $img.Resize "575x"}}
+          <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="Video Thumbnail" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{end}}
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{with .Params.testimonials}}
+{{if .enable}}
+<section class="section pt-0 testimonials">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center" data-aos="fade-up">
+          <p class="text-uppercase">{{.subtitle | markdownify}}</p>
+          <h2 class="title">{{.title | markdownify}}</h2>
+          <p>{{.description | markdownify}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center no-gutters">
+      <div class="col-xl-4 col-md-3 d-none d-lg-block" data-aos="fade-up" data-aos-delay="50">
+        {{ if fileExists (add `assets/` .image_left) }}
+        {{$image_left:= resources.Get .image_left }}
+        {{$image_left:= $image_left.Resize "445x"}}
+        <img loading="lazy" decoding="async" class="img-fluid" width="{{$image_left.Width}}" height="{{$image_left.Height}}" src="{{$image_left.RelPermalink}}" alt="testimonials" onerror="this.onerror=null;this.src='{{$image_left.RelPermalink}}'">
+        {{end}}
+      </div>
+
+      <div class="col-xl-4 col-lg-5 col-md-8 col-sm-10" data-aos="fade-up">
+        <div class="testimonial-carousel swiper-container">
+          <div class="swiper-wrapper mb-3">
+            {{range .testimonials_quotes}}
+            <div class="swiper-slide">
+              <div class="block">
+                <i class="quote-icon las la-quote-left"></i>
+                <p class="quote-text">{{.quote}}</p>
+                <span class="author">
+                  {{ if fileExists (add `assets/` .image) }}
+                  {{$img:= resources.Get .image }}
+                  {{$img:= $img.Resize "90x "}}
+                  {{$imgWebp:= $img.Resize "90x webp"}}
+                  <img loading="lazy" decoding="async" class="rounded-circle" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Video Thumbnail" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+                  {{end}}
+                  <h5>{{.name | markdownify}}</h5>
+                  <p>{{.designation | markdownify}}</p>
+                </span>
+              </div>
+            </div>
+            {{end}}
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-3 d-none d-lg-block" data-aos="fade-up" data-aos-delay="150">
+        {{ if fileExists (add `assets/` .image_right) }}
+        {{$img:= resources.Get .image_right }}
+        {{$img:= $img.Resize "445x"}}
+        <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="testimonials" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+        {{end}}
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+{{end}}

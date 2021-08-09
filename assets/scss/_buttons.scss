@@ -1,0 +1,70 @@
+// button style
+.btn {
+	padding: 14px 24px;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 6px;
+	transition: .2s ease-out;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	border: 0;
+	
+	&:active,
+	&:focus {
+		box-shadow: none !important;
+	}
+
+	&.btn-sm {
+		padding: 10px 20px;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		height: 0;
+		width: 100%;
+		left: 0;
+		top: 0;
+		background-color: rgba($black, .1);
+		z-index: -1;
+		transition: .3s;
+		border-radius: 6px;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		box-shadow: 0 10px 25px rgba($black, .1);
+		&::after {
+			height: 100%;
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	&.btn-primary {
+		background-color: $primary-color !important;
+		border: 0;
+		&:hover,
+		&:active,
+		&:focus {
+			color: $white;
+		}
+	}
+
+	&.btn-outline-primary {
+		color: $primary-color;
+		border: 1px solid $primary-color;
+		background-color: transparent !important;
+		&::after {
+			background-color: $primary-color !important;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			color: $white;
+			background-color: $primary-color !important;
+			border-color: $primary-color !important;
+		}
+	}
+}

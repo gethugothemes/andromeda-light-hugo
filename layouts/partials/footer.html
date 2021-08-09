@@ -1,0 +1,119 @@
+{{with site.Params.cta}}
+{{if .enable}}
+<section class="call-to-action has-bg-color">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="block">
+          <div class="section-title text-center mb-0" data-aos="fade-up">
+            <h2 class="title underline-none">{{.title | markdownify}}</h2>
+            <p>{{.content | markdownify}}</p>
+            <a href="{{.button_link}}" class="btn btn-primary mt-4">{{.button}}</a>
+          </div>
+        </div>
+
+        <div class="has-circle has-bg-anim" data-aos="fade-in">
+          <img class="wave-1 w-100" src="{{`images/waves/05.svg` | absURL}}" alt="*">
+          <span class="circle-1 ratio-32"></span>
+          <span class="circle-2 ratio-85 fill"></span>
+          <span class="circle-3 ratio-47"></span>
+          <span class="circle-4 ratio-20 fill"></span>
+          <span class="circle-5 ratio-73"></span>
+          <span class="circle-6 ratio-37"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+{{end}}
+
+
+<footer class="footer pb-5 {{if site.Params.cta.enable}}{{else}}mt-0{{end}}">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="border-top pb-5" data-aos="fade-up"></div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up">
+        <div class="pr-4">
+          <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
+            {{ $logo:= site.Params.logo }}
+            {{ if fileExists (add `assets/` $logo) }}
+            {{ $logo:= resources.Get $logo }}
+            <img loading="lazy" decoding="async" class="img-fluid mb-4" width="{{site.Params.logo_width}}" height="45" src="{{$logo.RelPermalink}}" alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{$logo.RelPermalink}}'">
+            {{ else }}
+            {{site.Params.logo_text | markdownify}}
+            {{ end }}
+          </a>
+          <p class="mb-0">{{site.Params.footer_info | markdownify}}</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-sm-0" data-aos="fade-up" data-aos-delay="50">
+        <div class="footer-widget">
+          <h4 class="mb-4">Socials</h4>
+
+          {{with site.Params.contact_info.email}}
+          <ul class="footer-links list-unstyled mb-4">
+            {{range first 1 .}}
+            {{if .}}
+            <li><a href="mailto:{{.}}">{{.}}</a></li>
+            {{end}}
+            {{end}}
+          </ul>
+          {{end}}
+
+          {{ with site.Params.social}}
+          <ul class="social-links list-inline">
+            {{ range .}}
+            <li class="list-inline-item"><a href="{{.link}}" title="{{.title}}">
+              <i class="{{.icon}}"></i>
+            </a></li>
+            {{end}}
+          </ul>
+          {{end}}
+
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="footer-widget">
+          <h4 class="mb-4">Quick Links</h4>
+
+          <ul class="footer-links list-unstyled">
+            {{range site.Menus.footer}}
+            <li><a href="{{.URL | relLangURL}}">{{.Name}}</a></li>
+            {{end}}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
+        <div class="footer-widget">
+          <h4 class="mb-4">Location &amp; Contact</h4>
+
+          {{with site.Params.contact_info}}
+          <ul class="footer-links list-unstyled">
+            <li>{{.address | markdownify}}</li>
+            {{range first 1 .phone}}
+            {{if .}}
+            <li><a href="tel:{{.}}">{{.}}</a></li>
+            {{end}}
+            {{end}}
+          </ul>
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="py-4 border-top text-center">
+          <p class="mb-0 content">{{site.Params.copyright | markdownify}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

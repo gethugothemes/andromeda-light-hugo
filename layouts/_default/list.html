@@ -1,0 +1,116 @@
+{{ define "main" }}
+
+<!-- checking blog -->
+{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+{{ partial "page-header.html" . }}
+
+<section class="section-sm" data-aos="fade-in">
+  <div class="container-xxl">
+    <div class="row justify-content-center">
+    {{ $paginator := .Paginate (where site.RegularPages "Section" "in" site.Params.mainSections) }}
+    {{ range $paginator.Pages }}
+    <div class="col-lg-5">
+      {{ .Render "article" }}
+    </div>
+    {{ end }}
+    </div>
+  </div>
+</section>
+
+<div class="section-sm pt-0">
+<div class="container-xxl">
+  <div class="row mb-4">
+    <div class="col-12">
+      {{"<!-- pagination -->" | safeHTML }}
+      {{ $paginator := .Paginator }}
+      <!-- Number of links either side of the current page. -->
+      {{ $adjacent_links := 2 }}
+      <!-- $max_links = ($adjacent_links * 2) + 1 -->
+      {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+      <!-- $lower_limit = $adjacent_links + 1 -->
+      {{ $lower_limit := (add $adjacent_links 1) }}
+      <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+      {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
+      <!-- If there's more than one page. -->
+      {{ if gt $paginator.TotalPages 1 }}
+      <nav class="mb-3">
+        <ul class="pagination justify-content-center">
+          <!-- Previous page. -->
+          {{ if $paginator.HasPrev }}
+          <li class="page-item"><a class="page-link arrow" href="{{ $paginator.Prev.URL }}" aria-label="Pagination Arrow">
+            <i class="las la-angle-left"></i>
+          </a></li>
+          {{ end }}
+          <!-- Page numbers. -->
+          {{ range $paginator.Pagers }}
+          {{ $.Scratch.Set "page_number_flag" false }}
+          <!-- Advanced page numbers. -->
+          {{ if gt $paginator.TotalPages $max_links }}
+          <!-- Lower limit pages. -->
+          <!-- If the user is on a page which is in the lower limit.  -->
+          {{ if le $paginator.PageNumber $lower_limit }}
+          <!-- If the current loop page is less than max_links. -->
+          {{ if le .PageNumber $max_links }}
+          {{ $.Scratch.Set "page_number_flag" true }}
+          {{ end }}
+          <!-- Upper limit pages. -->
+          <!-- If the user is on a page which is in the upper limit. -->
+          {{ else if ge $paginator.PageNumber $upper_limit }}
+          <!-- If the current loop page is greater than total pages minus $max_links -->
+          {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}
+          {{ $.Scratch.Set "page_number_flag" true }}
+          {{ end }}
+          <!-- Middle pages. -->
+          {{ else }}
+          {{ if and ( ge .PageNumber (sub $paginator.PageNumber $adjacent_links) ) ( le .PageNumber (add $paginator.PageNumber $adjacent_links) ) }}
+          {{ $.Scratch.Set "page_number_flag" true }}
+          {{ end }}
+          {{ end }}
+          <!-- Simple page numbers. -->
+          {{ else }}
+          {{ $.Scratch.Set "page_number_flag" true }}
+          {{ end }}
+          <!-- Output page numbers. -->
+          {{ if eq ($.Scratch.Get "page_number_flag") true }}
+          <li class="page-item">
+            <a href="{{ .URL }}" class="page-link{{ if eq . $paginator }} active {{ end }}">
+              {{ .PageNumber }}
+            </a>
+          </li>
+          {{ end }}
+          {{ end }}
+          <!-- Next page. -->
+          {{ if $paginator.HasNext }}
+          <li class="page-item"><a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="Pagination Arrow">
+            <i class="las la-angle-right"></i>
+          </a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      {{ end }}
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<!-- regular page -->
+{{ else }}
+
+{{ partial "page-header.html" . }}
+<section class="section">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="content">
+          {{.Content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- /regular page -->
+
+{{ end }}
