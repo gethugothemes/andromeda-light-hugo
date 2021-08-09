@@ -27,15 +27,21 @@ ExampleSite can be found here: [exampleSite](https://github.com/gethugothemes/an
 
 ---
 
+## Customize 🌟
+
+Read Wiki For More Details => **[Home](https://github.com/gethugothemes/Andromeda-light/wiki/home)**
+
+---
+
 ## Installation 📥
 
-Read Wiki For More Details => **[Andromeda-light - Installation](https://github.com/gethugothemes/Andromeda-light/wiki/installation)**
+Read Wiki For More Details => **[Installation](https://github.com/gethugothemes/Andromeda-light/wiki/installation)**
 
 ---
 
 ## Configuration ⚙
 
-Read Wiki For More Details => **[Andromeda-light - Configuration](https://github.com/gethugothemes/Andromeda-light/wiki/configuration)**
+Read Wiki For More Details => **[Configuration](https://github.com/gethugothemes/Andromeda-light/wiki/configuration)**
 
 ---
 
