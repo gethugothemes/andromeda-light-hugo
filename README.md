@@ -1,9 +1,9 @@
-# <h1 align=center>Andromeda-light <a target="_blank" href="https://demo.gethugothemes.com/andromeda-light" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fandromeda-light%2F">Page Speed (85%)</a></h1>
+# <h1 align=center>Andromeda Light | <a target="_blank" href="https://demo.gethugothemes.com/andromeda-light" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fandromeda-light%2F">Page Speed (85%)</a></h1>
 
 
 <p align=center>
-  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.84.0" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.84.0&color=f00&logo=hugo" />
+  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.87.0" alt="Contributors">
+    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.87.0&color=f00&logo=hugo" />
   </a>
 
   <a href="https://github.com/gethugothemes/andromeda-light/blob/master/LICENSE">
@@ -41,8 +41,8 @@
 - Contact form support
 - GDPR consent enabled
 - Caching enabled
-- AOS animation used.
-- Recent posts suggestion on single post.
+- AOS animation used
+- Recent posts suggestion on single post
 - Post reading time calculate
 - Google page speed optimized ( 85% )
 
@@ -85,7 +85,7 @@ Build your website with **Andromeda Light Hugo** theme by following these easy s
 
 <!-- reporting issue -->
 ## Reporting Issues
-We use GitHub Issues as the official bug tracker for the andromeda-light Template. Please Search [existing
+We use GitHub Issues as the official bug tracker for the andromeda light Template. Please Search [existing
 issues](https://github.com/gethugothemes/andromeda-light/issues). Someone may have already reported the same problem.
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/gethugothemes/andromeda-light/issues).
@@ -106,13 +106,13 @@ share those images.
 
 <!-- resources -->
 ## Special Thanks
-- [Aos](https://michalsnik.github.io/aos/)
-- [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
-- [Jquery](https://jquery.com/download/)
+- [Aos](https://michalsnik.github.io/aos)
+- [Bootstrap](https://getbootstrap.com)
+- [Jquery](https://jquery.com)
 - [Line awesome](https://icons8.com/line-awesome)
-- [Rellax](https://dixonandmoe.com/rellax/)
-- [Swiper](https://swiperjs.com/demos)
-- [Google Fonts](http://fonts.google.com/)
+- [Rellax](https://dixonandmoe.com)
+- [Swiper](https://swiperjs.com)
+- [Google Fonts](https://fonts.google.com)
 - [All Contributors](https://github.com/gethugothemes/andromeda-light/graphs/contributors)
 
 
