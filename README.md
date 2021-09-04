@@ -118,7 +118,7 @@ share those images.
 
 ## Hire Us
 We are available for **Hiring** for your next HUGO project. Please, check our
-[services](https://gethugothemes.com/services)
+[services](https://cutt.ly/ght-service)
 
 <!-- premium themes -->
 ## Premium Themes By Us
