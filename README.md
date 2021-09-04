@@ -21,35 +21,33 @@
 
 ---
 
-<!-- <p align="center">
-  <img src="https://user-images.githubusercontent.com/37659754/54068559-44d79a80-4278-11e9-9601-f58d6879989c.gif"
-    alt="screenshot" width="100%">
-</p> -->
+<p align="center">
+  <img src="https://demo.gethugothemes.com/thumbnails/andromeda.webp" alt="screenshot" width="100%">
+</p>
 
 ---
-## 🔥 Features
+## Features
 - Open graph meta tag
 - Twitter card meta tag
 - Google analytics  support
 - Multiple language support(Fr, En)
-- image optimised  with hugo pipe
+- Image optimised  with hugo pipe
 - Css and js bundle with hugo pipe
 - Netlify settings predefined
-- forestry cms pre-configured
+- Forestry cms pre-configured
 - Google font loads from webfont loader
 - Multiple author and single author available
 - Color and fonts variable in config file
 - Contact form support
-- GDPR consent enabled)
-- caching enabled
+- GDPR consent enabled
+- Caching enabled
 - AOS animation used.
 - Recent posts suggestion on single post.
+- Post reading time calculate
 - Google page speed optimized ( 85% )
-- post reading time calculate
 
 
-
-## 🚀 Local development
+## Local development
 
 ```bash
 # clone the repository
@@ -63,7 +61,7 @@ $ hugo server --themesDir ../..
 ```
 Or Check out [Full Documentation](https://docs.gethugothemes.com/andromeda/?ref=github).
 
-## 📚 Content Management System
+## Content Management System
 
 [![import to
 Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=gethugothemes/andromeda-light&engine=hugo&version=0.80.0)
@@ -72,35 +70,32 @@ This project has been pre-configured to work with [Forestry](https://forestry.io
 repository in Forestry](https://app.forestry.io/quick-start?repo=gethugothemes/andromeda-light&engine=hugo&version=0.80.0) and
 you will be able to edit and preview your site ✨.
 
-Any changes you make in Forestry will be committed back to the repo and deployed if you use [Netlify](#netlify) or
-[Vercel](#vercel).
+Any changes you make in Forestry will be committed back to the repo and deployed if you use [Netlify](#netlify).
 
-## 🌎 Deployment and hosting
+## Deployment and hosting
 
 [![Deploy to
 Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gethugothemes/andromeda-light)
 
 Follow the steps.
 
-## 🎥 Prefer a video? (Hugo + Netlify + Forestry)
-Build your website with **andromeda-light Hugo** theme by following these easy steps (No Coding Required!)
+## Prefer a video? (Hugo + Netlify + Forestry)
+Build your website with **Andromeda Light Hugo** theme by following these easy steps (No Coding Required!)
 [Video Tutorial](https://youtu.be/ResipmZmpDU).
 
 <!-- reporting issue -->
-## 🐛 Reporting Issues
+## Reporting Issues
 We use GitHub Issues as the official bug tracker for the andromeda-light Template. Please Search [existing
 issues](https://github.com/gethugothemes/andromeda-light/issues). Someone may have already reported the same problem.
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/gethugothemes/andromeda-light/issues).
 
-## ⚙️ andromeda-light Hugo theme Powered Websites
+<!-- ## andromeda light Hugo theme Powered Websites
 
-
-
-View all the websites powered by andromeda-light Hugo theme [here](https://github.com/gethugothemes/andromeda-light/wiki/All-andromeda-light-theme-Powered-Websites). Want to submit your own website powered by andromeda-light Hugo theme? You can submit it [here](https://github.com/gethugothemes/andromeda-light/discussions/174).
+View all the websites powered by andromeda-light Hugo theme [here](https://github.com/gethugothemes/andromeda-light/wiki/All-andromeda-light-theme-Powered-Websites). Want to submit your own website powered by andromeda-light Hugo theme? You can submit it [here](https://github.com/gethugothemes/andromeda-light/discussions/174). -->
 
 <!-- licence -->
-## 🔑 License
+## License
 Copyright &copy; Designed by [Themefisher](https://themefisher.com) & Developed by
 [Gethugothemes](https://gethugothemes.com)
 
@@ -110,23 +105,23 @@ Copyright &copy; Designed by [Themefisher](https://themefisher.com) & Developed 
 share those images.
 
 <!-- resources -->
-## 🎉 Special Thanks
-- [aos](https://michalsnik.github.io/aos/)
+## Special Thanks
+- [Aos](https://michalsnik.github.io/aos/)
 - [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 - [Jquery](https://jquery.com/download/)
 - [Line awesome](https://icons8.com/line-awesome)
-- [rellax](https://dixonandmoe.com/rellax/)
-- [swiper](https://swiperjs.com/demos)
+- [Rellax](https://dixonandmoe.com/rellax/)
+- [Swiper](https://swiperjs.com/demos)
 - [Google Fonts](http://fonts.google.com/)
 - [All Contributors](https://github.com/gethugothemes/andromeda-light/graphs/contributors)
 
 
-## 💼 Hire Us
+## Hire Us
 We are available for **Hiring** for your next HUGO project. Please, check our
 [services](https://gethugothemes.com/services)
 
 <!-- premium themes -->
-## 💎 Premium Themes By Us
+## Premium Themes By Us
 | [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.webp)](https://gethugothemes.com/bundle) | [![Delta](https://demo.gethugothemes.com/thumbnails/delta.webp)](https://gethugothemes.com/products/delta/) | [![Bizcraft](https://demo.gethugothemes.com/thumbnails/agico.webp)](https://gethugothemes.com/products/agico-hugo-theme/) |
 |:---:|:---:|:---:|
 | **Premium Theme Bundle (40+)** | **Delta** | **Agico** |
