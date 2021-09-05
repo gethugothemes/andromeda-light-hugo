@@ -2,8 +2,8 @@
 
 
 <p align=center>
-  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.87.0" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.87.0&color=f00&logo=hugo" />
+  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.83.1" alt="Contributors">
+    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.83.1&color=f00&logo=hugo" />
   </a>
 
   <a href="https://github.com/gethugothemes/andromeda-light/blob/master/LICENSE">
@@ -64,10 +64,10 @@ Or Check out [Full Documentation](https://docs.gethugothemes.com/andromeda/?ref=
 ## Content Management System
 
 [![import to
-Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=gethugothemes/andromeda-light&engine=hugo&version=0.80.0)
+Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=gethugothemes/andromeda-light&engine=hugo&version=0.87.0)
 
 This project has been pre-configured to work with [Forestry](https://forestry.io) a git-based CMS, [import your
-repository in Forestry](https://app.forestry.io/quick-start?repo=gethugothemes/andromeda-light&engine=hugo&version=0.80.0) and
+repository in Forestry](https://app.forestry.io/quick-start?repo=gethugothemes/andromeda-light&engine=hugo&version=0.87.0) and
 you will be able to edit and preview your site ✨.
 
 Any changes you make in Forestry will be committed back to the repo and deployed if you use [Netlify](#netlify).
