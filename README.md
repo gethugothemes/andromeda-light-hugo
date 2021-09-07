@@ -1,4 +1,4 @@
-# <h1 align=center>Andromeda Light | <a target="_blank" href="https://demo.gethugothemes.com/andromeda-light" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fandromeda-light%2F">Page Speed (85%)</a></h1>
+# <h1 align=center>Andromeda Lightb Hugo | <a target="_blank" href="https://demo.gethugothemes.com/andromeda-light" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fandromeda-light%2F">Page Speed (85%)</a></h1>
 
 
 <p align=center>
@@ -27,25 +27,43 @@
 
 ---
 ## Features
-- Open graph meta tag
-- Twitter card meta tag
-- Google analytics  support
-- Multiple language support(Fr, En)
-- Image optimised  with hugo pipe
-- Css and js bundle with hugo pipe
-- Netlify settings predefined
-- Forestry cms pre-configured
-- Google font loads from webfont loader
-- Multiple author and single author available
-- Color and fonts variable in config file
-- Contact form support
-- GDPR consent enabled
-- Caching enabled
-- AOS animation used
-- Recent posts suggestion on single post
-- Post reading time calculate
-- Google page speed optimized ( 85% )
 
+
+| [Andromeda Light](https://github.com/gethugothemes/andromeda-light)                      | [Andromeda Premium](https://demo.gethugothemes.com/andromeda/)                              |
+| :-------------                                                                           |:-------------                            | 
+| Google analytics  support                                                                | Google analytics  support                |
+| image optimize  with hugo pipe                                                           | image optimize with hugo pipe            |
+| CSS and Js bundle with hugo pipe                                                         | CSS and Js bundle with hugo pipe         |
+| Netlify settings predefine                                                               | Netlify settings predefine               |
+| Google font loads from webfont loader                                                    | Google font loads from webfont loader    |
+| Color and fonts variable in config file                                                  | Color and fonts variable in config file  |
+| Contact form Support                                                                     | Contact form support                     |
+| GDPR consent enable                                                                      | GDPR consent enable                     |
+| Post reading time calculator                                                             | Post reading time calculate              |
+| Google page speed optimized ( 85% )                                                      | Google page speed optimized ( 84% )      |          
+| Open graph meta tag                                                                      | Open graph meta tag                      |
+| Twitter card meta tag                                                                    | Twitter card meta tag                    |
+| Home page, About page, Contact page and more pages available                             | Forestry cms pre-configured              |
+|                                                                                          | Multiple author and single author        |
+|                                                                                          | Multiple language support (Fr, En)       |
+|                                                                                          | Caching enable                           |
+|                                                                                          | Home page                                |
+|                                                                                          | About page                               |
+|                                                                                          | How It Works page                        |
+|                                                                                          | Blog  page                               |
+|                                                                                          | Career page                              |
+|                                                                                          | Pricing page                             |
+|                                                                                          | Blog Details page                        |
+|                                                                                          | Author Single page                       |
+|                                                                                          | Job Details page                         |
+|                                                                                          | Case Studies page                        |
+|                                                                                          | Case Studies Details page                |
+|                                                                                          | Term & Conditions page                   |
+|                                                                                          | Changlog page                            |
+|                                                                                          | Sign In page                             |
+|                                                                                          | Contact page                             |
+                                   
+                           
 
 ## Local development
 
@@ -90,9 +108,27 @@ issues](https://github.com/gethugothemes/andromeda-light/issues). Someone may ha
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/gethugothemes/andromeda-light/issues).
 
-<!-- ## andromeda light Hugo theme Powered Websites
+## andromeda light Hugo  Powered Websites
 
-View all the websites powered by andromeda-light Hugo theme [here](https://github.com/gethugothemes/andromeda-light/wiki/All-andromeda-light-theme-Powered-Websites). Want to submit your own website powered by andromeda-light Hugo theme? You can submit it [here](https://github.com/gethugothemes/andromeda-light/discussions/174). -->
+- https://www.actiphysique.fr/
+- https://www.azurethamesvalley.com/
+- https://kinkeldey.com/
+- https://garthorr.com/
+- https://gaug.co.uk/
+- https://idmn.me/
+- http://graysonwhite.com/
+- https://makotokawano.com/
+- https://www.mehrnazamiri.com/
+- https://osorensen.rbind.io/
+- https://www.yongjiguan.com/
+- https://www.tkovs.com/
+- https://dipterix.org/
+- https://timiowourocom.firebaseapp.com/
+- https://svensmark.jp/
+- https://www.hannesdatta.com/
+
+
+View all the websites powered by andromeda-light Hugo  [here](https://github.com/gethugothemes/andromeda-light/wiki/Popular-sites-powered-by-Andromeda-Light-Hugo). Want to submit your own website powered by andromeda-light Hugo ? You can submit it [here](https://github.com/gethugothemes/andromeda-light/discussions/3).
 
 <!-- licence -->
 ## License
@@ -106,9 +142,9 @@ share those images.
 
 <!-- resources -->
 ## Special Thanks
-- [Aos](https://michalsnik.github.io/aos)
 - [Bootstrap](https://getbootstrap.com)
 - [Jquery](https://jquery.com)
+- [Aos](https://michalsnik.github.io/aos)
 - [Line awesome](https://icons8.com/line-awesome)
 - [Rellax](https://dixonandmoe.com)
 - [Swiper](https://swiperjs.com)
