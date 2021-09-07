@@ -38,16 +38,16 @@
 | Google font loads from webfont loader                                                    | Google font loads from webfont loader    |
 | Color and fonts variable in config file                                                  | Color and fonts variable in config file  |
 | Contact form Support                                                                     | Contact form support                     |
-| GDPR consent enable                                                                      | GDPR consent enable                     |
+| GDPR consent enable                                                                      | GDPR consent enable                      |
 | Post reading time calculator                                                             | Post reading time calculate              |
 | Google page speed optimized ( 85% )                                                      | Google page speed optimized ( 84% )      |          
 | Open graph meta tag                                                                      | Open graph meta tag                      |
 | Twitter card meta tag                                                                    | Twitter card meta tag                    |
-| Home page, About page, Contact page and more pages available                             | Forestry cms pre-configured              |
+| Home page, About page, Contact page and more pages available                             |   Premium page list ([How It Works page](https://demo.gethugothemes.com/andromeda/how-it-works/), [Career page](https://demo.gethugothemes.com/andromeda/career/), [Pricing page](https://demo.gethugothemes.com/andromeda/pricing/), [Author Single page](https://demo.gethugothemes.com/andromeda/author/abdullah-al-shifat/),  [Job Details page](https://demo.gethugothemes.com/andromeda/career/job-post-1/), [Case Studies page](https://demo.gethugothemes.com/andromeda/case-studies/), [Case Studies Details page](https://demo.gethugothemes.com/andromeda/case-studies/case-1/), [Changlog page](https://demo.gethugothemes.com/andromeda/changelog/), [Sign In page](https://demo.gethugothemes.com/andromeda/contact/) )              |
 |                                                                                          | Multiple author and single author        |
 |                                                                                          | Multiple language support (Fr, En)       |
+|                                                                                          | Forestry cms pre-configured              |
 |                                                                                          | Caching enable                           |
-|                                                                                          | Premium page list ([How It Works page](https://demo.gethugothemes.com/andromeda/how-it-works/), [Career page](https://demo.gethugothemes.com/andromeda/career/), [Pricing page](https://demo.gethugothemes.com/andromeda/pricing/), [Author Single page](https://demo.gethugothemes.com/andromeda/author/abdullah-al-shifat/),  [Job Details page](https://demo.gethugothemes.com/andromeda/career/job-post-1/), [Case Studies page](https://demo.gethugothemes.com/andromeda/case-studies/), [Case Studies Details page](https://demo.gethugothemes.com/andromeda/case-studies/case-1/), [Changlog page](https://demo.gethugothemes.com/andromeda/changelog/), [Sign In page](https://demo.gethugothemes.com/andromeda/contact/) )                           |
 
                            
 
