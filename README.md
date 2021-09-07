@@ -29,7 +29,7 @@
 ## Features
 
 
-| [Andromeda Light](https://github.com/gethugothemes/andromeda-light)                      | [Andromeda Premium](https://demo.gethugothemes.com/andromeda/)                              |
+| [Andromeda Light](https://github.com/gethugothemes/andromeda-light)                      | [Andromeda Premium](https://gethugothemes.com/products/andromeda/)                              |
 | :-------------                                                                           |:-------------                            | 
 | Google analytics  support                                                                | Google analytics  support                |
 | image optimize  with hugo pipe                                                           | image optimize with hugo pipe            |
