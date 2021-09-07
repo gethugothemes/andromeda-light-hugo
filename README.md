@@ -47,22 +47,8 @@
 |                                                                                          | Multiple author and single author        |
 |                                                                                          | Multiple language support (Fr, En)       |
 |                                                                                          | Caching enable                           |
-|                                                                                          | [Home page](https://demo.gethugothemes.com/andromeda/)                                |
-|                                                                                          | [About page](https://demo.gethugothemes.com/andromeda/about/)                         |
-|                                                                                          | [How It Works page](https://demo.gethugothemes.com/andromeda/how-it-works/)                        |
-|                                                                                          | [Blog page](https://demo.gethugothemes.com/andromeda/blog/)                            |
-|                                                                                          | [Career page](https://demo.gethugothemes.com/andromeda/career/)                        |
-|                                                                                          | [Pricing page](https://demo.gethugothemes.com/andromeda/pricing/)                      |
-|                                                                                          | [Blog Details page](https://demo.gethugothemes.com/andromeda/blog/post-1/)                        |
-|                                                                                          | [Author Single page](https://demo.gethugothemes.com/andromeda/author/abdullah-al-shifat/)                       |
-|                                                                                          | [Job Details page](https://demo.gethugothemes.com/andromeda/career/job-post-1/)                         |
-|                                                                                          | [Case Studies page](https://demo.gethugothemes.com/andromeda/case-studies/)                        |
-|                                                                                          | [Case Studies Details page](https://demo.gethugothemes.com/andromeda/case-studies/case-1/)                |
-|                                                                                          | [Term & Conditions page](https://demo.gethugothemes.com/andromeda/terms-and-conditions/)                   |
-|                                                                                          | [Changlog page](https://demo.gethugothemes.com/andromeda/changelog/)                           |
-|                                                                                          | [Sign In page](https://demo.gethugothemes.com/andromeda/signin/)                               |
-|                                                                                          | [Contact page](https://demo.gethugothemes.com/andromeda/contact/)                              |
-                                   
+|                                                                                          | Premium page list ([How It Works page](https://demo.gethugothemes.com/andromeda/how-it-works/), [Career page](https://demo.gethugothemes.com/andromeda/career/), [Pricing page](https://demo.gethugothemes.com/andromeda/pricing/), [Author Single page](https://demo.gethugothemes.com/andromeda/author/abdullah-al-shifat/),  [Job Details page](https://demo.gethugothemes.com/andromeda/career/job-post-1/), [Case Studies page](https://demo.gethugothemes.com/andromeda/case-studies/), [Case Studies Details page](https://demo.gethugothemes.com/andromeda/case-studies/case-1/), [Changlog page](https://demo.gethugothemes.com/andromeda/changelog/), [Sign In page](https://demo.gethugothemes.com/andromeda/contact/) )                           |
+
                            
 
 ## Local development
