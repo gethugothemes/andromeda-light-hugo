@@ -30,7 +30,7 @@
 
 
 Featurees | [Andromeda LIght](https://github.com/gethugothemes/andromeda-light)  | [Andromeda Premium](https://gethugothemes.com/products/andromeda/?ref=github) | 
-:------------ | :-------------| :-------------| 
+:------------ |    :----:    |     :----:    | 
 Multiple language support (Fr, En)         | :heavy_multiplication_x: | :heavy_check_mark: |
 Google analytics support                   | :heavy_check_mark: | :heavy_check_mark:                |
 image optimize with hugo pipe              | :heavy_check_mark: | :heavy_check_mark:                |
