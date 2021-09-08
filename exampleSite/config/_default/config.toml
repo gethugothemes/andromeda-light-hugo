@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://examplesite.com/"
+baseURL = "https://demo.gethugothemes.com/andromeda-light/"
 title = "Andromeda-light - Software and SAAS Landing Hugo Theme"
 theme = "andromeda-light"
 # post pagination

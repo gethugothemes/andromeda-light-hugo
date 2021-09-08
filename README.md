@@ -1,4 +1,4 @@
-# <h1 align=center>Andromeda Light | <a target="_blank" href="https://demo.gethugothemes.com/andromeda-light" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fandromeda-light%2F">Page Speed (85%)</a></h1>
+# <h1 align=center>Andromeda Light | <a target="_blank" href="https://demo.gethugothemes.com/andromeda-light" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fandromeda-light%2F">Page Speed (92%)</a></h1>
 
 
 <p align=center>
@@ -40,7 +40,7 @@
 | Contact form Support                                                                     | Contact form support                     |
 | GDPR consent enable                                                                      | GDPR consent enable                      |
 | Post reading time calculator                                                             | Post reading time calculate              |
-| Google page speed optimized ( 85% )                                                      | Google page speed optimized ( 84% )      |          
+| Google page speed optimized  | Google page speed optimized      |          
 | Open graph meta tag                                                                      | Open graph meta tag                      |
 | Twitter card meta tag                                                                    | Twitter card meta tag                    |
 | Home page, About page, Contact page and more pages available                             |   Premium page list ([How It Works page](https://demo.gethugothemes.com/andromeda/how-it-works/), [Career page](https://demo.gethugothemes.com/andromeda/career/), [Pricing page](https://demo.gethugothemes.com/andromeda/pricing/), [Author Single page](https://demo.gethugothemes.com/andromeda/author/abdullah-al-shifat/),  [Job Details page](https://demo.gethugothemes.com/andromeda/career/job-post-1/), [Case Studies page](https://demo.gethugothemes.com/andromeda/case-studies/), [Case Studies Details page](https://demo.gethugothemes.com/andromeda/case-studies/case-1/), [Changlog page](https://demo.gethugothemes.com/andromeda/changelog/), [Sign In page](https://demo.gethugothemes.com/andromeda/contact/) )              |
