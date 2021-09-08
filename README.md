@@ -94,27 +94,11 @@ issues](https://github.com/gethugothemes/andromeda-light/issues). Someone may ha
 If your problem or idea has not been addressed yet, feel free to [open a new
 issue](https://github.com/gethugothemes/andromeda-light/issues).
 
-## andromeda light Hugo  Powered Websites
-
-- https://www.actiphysique.fr/
-- https://www.azurethamesvalley.com/
-- https://kinkeldey.com/
-- https://garthorr.com/
-- https://gaug.co.uk/
-- https://idmn.me/
-- http://graysonwhite.com/
-- https://makotokawano.com/
-- https://www.mehrnazamiri.com/
-- https://osorensen.rbind.io/
-- https://www.yongjiguan.com/
-- https://www.tkovs.com/
-- https://dipterix.org/
-- https://timiowourocom.firebaseapp.com/
-- https://svensmark.jp/
-- https://www.hannesdatta.com/
+<!-- ## andromeda light Hugo  Powered Websites
 
 
-View all the websites powered by andromeda-light Hugo  [here](https://github.com/gethugothemes/andromeda-light/wiki/Popular-sites-powered-by-Andromeda-Light-Hugo). Want to submit your own website powered by andromeda-light Hugo ? You can submit it [here](https://github.com/gethugothemes/andromeda-light/discussions/3).
+
+View all the websites powered by andromeda-light Hugo  [here](https://github.com/gethugothemes/andromeda-light/wiki/Popular-sites-powered-by-Andromeda-Light-Hugo). Want to submit your own website powered by andromeda-light Hugo ? You can submit it [here](https://github.com/gethugothemes/andromeda-light/discussions/3). -->
 
 <!-- licence -->
 ## License
