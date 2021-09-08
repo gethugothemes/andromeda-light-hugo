@@ -70,7 +70,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               {{$img:= resources.Get . }}
-              {{$img:= $img.Resize "1240x webp"}}
+              {{$img:= $img.Resize "1020x webp"}}
               <img loading="lazy" decoding="async" class="w-100 img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="Banner Image">
             </div>
           </div>
@@ -185,7 +185,7 @@
           </div>
 
           <div class="has-video-popup" data-aos="fade-up" data-aos-delay="100">
-            <button type="button" class="video-play-btn" data-src="{{.video_url}}">
+            <button type="button" class="video-play-btn" data-src="{{.video_url}}" aria-level="video play">
               <i class="las la-play"></i>
             </button>
             {{ if fileExists (add `assets/` .video_thumbnail) }}
