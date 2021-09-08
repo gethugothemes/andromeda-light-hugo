@@ -510,3 +510,56 @@ a.text-primary:hover {
 .border-primary {
   border-color: $primary-color !important
 }
+
+
+// buy-premium popup
+.buy-premium {
+  z-index: 9999;
+  height: 100vh;
+  width: calc(100vw - 40px);
+  top: 0;
+  left: 20px;
+  &.fade {
+    visibility: hidden;
+    &.show {
+      visibility: visible;
+    } 
+  }
+  @include mobile {
+    display: none !important;
+  }
+  .block {
+    max-width: 100%;
+    width: 700px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    button.close {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      height: 40px;
+      width: 40px;
+      background: $primary-color;
+      border-radius: 50%;
+      color: $white;
+      text-shadow: none;
+      opacity: 1;
+      transition: 0.3s;
+      &:hover {
+        background: darken($primary-color, 10);
+        opacity: 1;
+      }
+    }
+  }
+  .overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($black, .4);
+    top: 0;
+    left: 0;
+  }
+}

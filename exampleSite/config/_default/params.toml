@@ -24,6 +24,9 @@ copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By 
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
 custom_script= "" 
 
+# buy premium popup
+buy_premium_popup = true
+
 # Main Sections
 mainSections= ["blog"]
 

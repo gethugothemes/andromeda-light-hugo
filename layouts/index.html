@@ -1,5 +1,58 @@
 {{define "main"}}
 
+{{if site.Params.buy_premium_popup}}
+<div class="buy-premium position-fixed fade">
+  <div class="block p-4 p-lg-5 bg-white rounded-lg shadow-lg call-to-action has-bg-color">
+    <div class="position-relative" style="z-index: 2;">
+      <h2 class="text-center mb-4">Get Andromeda Premium</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1 font-weight-bold text-dark">Premium page list:</p>
+          <ol class="pl-0">
+            <li>How It Works</li>
+            <li>Pricing</li>
+            <li>Author Single</li>
+            <li>Career</li>
+            <li>Job Details</li>
+            <li>Case Studies</li>
+            <li>Case Studies Details</li>
+            <li>Changlog</li>
+            <li>Signin</li>
+            <li>Signup</li>
+          </ol>
+        </div>
+        <div class="col-sm-6">
+          <p class="mb-1 font-weight-bold text-dark">Premium Features list:</p>
+          <ol class="pl-0">
+            <li>Multiple author and single author</li>
+            <li>Multiple language support (Fr, En)</li>
+            <li>Forestry cms pre-configured</li>
+            <li>Caching enable</li>
+          </ol>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="https://gethugothemes.com/products/andromeda/" class="btn btn-primary mt-2">Download Now</a>
+      </div>
+    </div>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    <div class="has-circle has-bg-anim" style="opacity: .5">
+      <img class="wave-1 w-100" src="{{`images/waves/05.svg` | absURL}}" alt="*">
+      <span class="circle-1 ratio-32"></span>
+      <span class="circle-2 ratio-37"></span>
+      <span class="circle-3 ratio-47"></span>
+      <span class="circle-4 ratio-20"></span>
+      <span class="circle-5 ratio-73"></span>
+      <span class="circle-6 ratio-37"></span>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</div>
+{{end}}
+
 {{with .Params.banner}}
 <section class="banner">
   <div class="container-xxl">

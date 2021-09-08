@@ -19,6 +19,10 @@ $(window).on('load', function () {
 	setTimeout (function(){
 		$('.preloader').fadeOut(200);
 
+		setTimeout(() => {
+			$('.buy-premium').addClass('show');
+		}, 8000);
+
 		// aos scroll-animation Init
 		function aosAnim() {
 			AOS.init({
@@ -30,6 +34,11 @@ $(window).on('load', function () {
 			aosAnim();
 		},100);
 	},50);
+});
+
+// buy-premium
+$('.buy-premium .close').on('click', function () {
+	$('.buy-premium').removeClass('show');
 });
 
 // header sticky
