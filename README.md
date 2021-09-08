@@ -26,30 +26,45 @@
 </p>
 
 ---
-## Features
+## Discover Free & Premium Features
 
 
-| [Andromeda Light](https://github.com/gethugothemes/andromeda-light)                      | [Andromeda Premium](https://gethugothemes.com/products/andromeda/)                              |
-| :-------------                                                                           |:-------------                            | 
-| Google analytics  support                                                                | Google analytics  support                |
-| image optimize  with hugo pipe                                                           | image optimize with hugo pipe            |
-| CSS and Js bundle with hugo pipe                                                         | CSS and Js bundle with hugo pipe         |
-| Netlify settings predefine                                                               | Netlify settings predefine               |
-| Google font loads from webfont loader                                                    | Google font loads from webfont loader    |
-| Color and fonts variable in config file                                                  | Color and fonts variable in config file  |
-| Contact form Support                                                                     | Contact form support                     |
-| GDPR consent enable                                                                      | GDPR consent enable                      |
-| Post reading time calculator                                                             | Post reading time calculate              |
-| Google page speed optimized  | Google page speed optimized      |          
-| Open graph meta tag                                                                      | Open graph meta tag                      |
-| Twitter card meta tag                                                                    | Twitter card meta tag                    |
-| Home page, About page, Contact page and more pages available                             |   Premium page list ([How It Works page](https://demo.gethugothemes.com/andromeda/how-it-works/), [Career page](https://demo.gethugothemes.com/andromeda/career/), [Pricing page](https://demo.gethugothemes.com/andromeda/pricing/), [Author Single page](https://demo.gethugothemes.com/andromeda/author/abdullah-al-shifat/),  [Job Details page](https://demo.gethugothemes.com/andromeda/career/job-post-1/), [Case Studies page](https://demo.gethugothemes.com/andromeda/case-studies/), [Case Studies Details page](https://demo.gethugothemes.com/andromeda/case-studies/case-1/), [Changlog page](https://demo.gethugothemes.com/andromeda/changelog/), [Sign In page](https://demo.gethugothemes.com/andromeda/contact/) )              |
-|                                                                                          | Multiple author and single author        |
-|                                                                                          | Multiple language support (Fr, En)       |
-|                                                                                          | Forestry cms pre-configured              |
-|                                                                                          | Caching enable                           |
+Featurees | [Andromeda LIght](https://github.com/gethugothemes/andromeda-light)  | [Andromeda Premium](https://gethugothemes.com/products/andromeda/?ref=github) | 
+:------------ | :-------------| :-------------| 
+Multiple language support (Fr, En)         | :heavy_multiplication_x: | :heavy_check_mark: |
+Google analytics support                   | :heavy_check_mark: | :heavy_check_mark:                |
+image optimize with hugo pipe              | :heavy_check_mark: | :heavy_check_mark:                |
+CSS and Js bundle with hugo pipe           | :heavy_check_mark: | :heavy_check_mark:                |
+Netlify settings predefine                 | :heavy_check_mark: | :heavy_check_mark:                |
+Google font loads from webfont loader      | :heavy_check_mark: | :heavy_check_mark:                |
+Color and fonts variable in config file    | :heavy_check_mark: | :heavy_check_mark:                |
+Contact form Support                       | :heavy_check_mark: | :heavy_check_mark:                |
+GDPR consent enable                        | :heavy_check_mark: | :heavy_check_mark:                |
+Post reading time calculator               | :heavy_check_mark: | :heavy_check_mark:                |
+Multiple author and single author          | :heavy_multiplication_x: | :heavy_check_mark: |
+Forestry cms pre-configured                | :heavy_multiplication_x: | :heavy_check_mark: |
+Caching enable                             | :heavy_multiplication_x: | :heavy_check_mark: |
+Google page speed optimized                | :heavy_check_mark: | :heavy_check_mark:                |
+Open graph meta tag                        | :heavy_check_mark: | :heavy_check_mark:                |
+Twitter card meta tag                      | :heavy_check_mark: | :heavy_check_mark:                |
+**Page List**    | -     | - |
+[Home Page](https://demo.gethugothemes.com/andromeda/)                                      | :heavy_check_mark: | :heavy_check_mark: |
+[About Page](https://demo.gethugothemes.com/andromeda/about/)                               | :heavy_check_mark: | :heavy_check_mark: |
+[How It Works page](https://demo.gethugothemes.com/andromeda/how-it-works/)                 | :heavy_multiplication_x: | :heavy_check_mark: |
+[Blog Page](https://demo.gethugothemes.com/andromeda/blog/)                                 | :heavy_check_mark: | :heavy_check_mark: |
+[Career Page](https://demo.gethugothemes.com/andromeda/career/)                             | :heavy_multiplication_x: | :heavy_check_mark: |
+[Pricing Page](https://demo.gethugothemes.com/andromeda/pricing/)                           | :heavy_multiplication_x: | :heavy_check_mark: |
+[blog Details Page](https://demo.gethugothemes.com/andromeda/blog/post-1/)                  | :heavy_check_mark: | :heavy_check_mark: |
+[Athour Single Page](https://demo.gethugothemes.com/andromeda/author/abdullah-al-shifat/)   | :heavy_multiplication_x: | :heavy_check_mark: |
+[Job Details Page](https://demo.gethugothemes.com/andromeda/career/job-post-1/)             | :heavy_multiplication_x: | :heavy_check_mark: |
+[Case Studies Page](https://demo.gethugothemes.com/andromeda/case-studies/)                 | :heavy_multiplication_x: | :heavy_check_mark: |
+[Case Studies Details Page](https://demo.gethugothemes.com/andromeda/case-studies/case-1/)  | :heavy_multiplication_x: | :heavy_check_mark: |
+[Term & Condition Page](https://demo.gethugothemes.com/andromeda/terms-and-conditions/)     | :heavy_check_mark: | :heavy_check_mark: |
+[Changelog Page](https://demo.gethugothemes.com/andromeda/changelog/)                       | :heavy_multiplication_x: | :heavy_check_mark: |
+[Sign In Page](https://demo.gethugothemes.com/andromeda/signin/)                            | :heavy_multiplication_x: | :heavy_check_mark: |
+[Contact Page](https://demo.gethugothemes.com/andromeda/contact/)                           | :heavy_check_mark: | :heavy_check_mark: |
+Get It Now | [![download-light](https://user-images.githubusercontent.com/88376439/132500272-dbe39bc0-bb69-4292-b72c-27599bf1bac5.png)](https://github.com/gethugothemes/andromeda-light/archive/refs/heads/master.zip) | [![download](https://user-images.githubusercontent.com/88376439/132500074-35ed470a-481c-49cb-ba05-ea0523da63e2.png)](https://gethugothemes.com/products/andromeda/?ref=github)
 
-                           
 
 ## Local development
 
