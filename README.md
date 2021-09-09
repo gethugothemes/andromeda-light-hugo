@@ -30,23 +30,24 @@
 
 Featurees | [Andromeda LIght](https://github.com/gethugothemes/andromeda-light)  | [Andromeda Premium](https://gethugothemes.com/products/andromeda/?ref=github) | 
 :------------ |    :----:    |     :----:    | 
-Google analytics support                   | :heavy_check_mark: | :heavy_check_mark:                |
-image optimize with hugo pipe              | :heavy_check_mark: | :heavy_check_mark:                |
-CSS and Js bundle with hugo pipe           | :heavy_check_mark: | :heavy_check_mark:                |
-Netlify settings predefine                 | :heavy_check_mark: | :heavy_check_mark:                |
-Google font loads from webfont loader      | :heavy_check_mark: | :heavy_check_mark:                |
-Color and fonts variable in config file    | :heavy_check_mark: | :heavy_check_mark:                |
-Contact form Support                       | :heavy_check_mark: | :heavy_check_mark:                |
-GDPR consent enable                        | :heavy_check_mark: | :heavy_check_mark:                |
-Post reading time calculator               | :heavy_check_mark: | :heavy_check_mark:                |
-Google page speed optimized                | :heavy_check_mark: | :heavy_check_mark:                |
-Open graph meta tag                        | :heavy_check_mark: | :heavy_check_mark:                |
-Twitter card meta tag                      | :heavy_check_mark: | :heavy_check_mark:                |
-Multiple language support (Fr, En)         | :heavy_multiplication_x: | :heavy_check_mark: |
-Multiple author and single author          | :heavy_multiplication_x: | :heavy_check_mark: |
-Forestry cms pre-configured                | :heavy_multiplication_x: | :heavy_check_mark: |
-Caching enable                             | :heavy_multiplication_x: | :heavy_check_mark: |
-9+ Premium Pages                           | :heavy_multiplication_x: | :heavy_check_mark: |
+Google analytics support                   | :white_check_mark: | :white_check_mark:                |
+image optimize with hugo pipe              | :white_check_mark: | :white_check_mark:                |
+CSS and Js bundle with hugo pipe           | :white_check_mark: | :white_check_mark:                |
+Netlify settings predefine                 | :white_check_mark: | :white_check_mark:                |
+Google font loads from webfont loader      | :white_check_mark: | :white_check_mark:                |
+Color and fonts variable in config file    | :white_check_mark: | :white_check_mark:                |
+Contact form Support (formspree)           | :white_check_mark: | :white_check_mark:                |
+GDPR consent enable                        | :white_check_mark: | :white_check_mark:                |
+Post reading time calculator               | :white_check_mark: | :white_check_mark:                |
+Google page speed optimized                | :white_check_mark: | :white_check_mark:                |
+Open graph meta tag                        | :white_check_mark: | :white_check_mark:                |
+Twitter card meta tag                      | :white_check_mark: | :white_check_mark:                |
+Multiple language support (Fr, En)         | :heavy_multiplication_x: | :white_check_mark: |
+Multiple author and single author          | :heavy_multiplication_x: | :white_check_mark: |
+Forestry cms pre-configured                | :heavy_multiplication_x: | :white_check_mark: |
+Caching enable                             | :heavy_multiplication_x: | :white_check_mark: |
+9+ Premium Pages                           | :heavy_multiplication_x: | :white_check_mark: |
+Priority Support                           | :heavy_multiplication_x: | :white_check_mark: |
 Get It Now | [![download-light](https://user-images.githubusercontent.com/88376439/132500272-dbe39bc0-bb69-4292-b72c-27599bf1bac5.png)](https://github.com/gethugothemes/andromeda-light/archive/refs/heads/master.zip) | [![download](https://user-images.githubusercontent.com/88376439/132500074-35ed470a-481c-49cb-ba05-ea0523da63e2.png)](https://gethugothemes.com/products/andromeda/?ref=github)
 
 
