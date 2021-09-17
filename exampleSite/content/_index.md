@@ -38,10 +38,10 @@ features:
     title: "Magnetic Turning"
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
   - icon: "las la-tachometer-alt"
-    title: "Secured &amp; upto date"
+    title: "Secured &amp; up-to-date"
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
   - icon: "las la-link"
-    title: "Instant Link Shareing"
+    title: "Instant Link Sharing"
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
   - icon: "las la-lock"
     title: "Updated Security"
@@ -79,7 +79,7 @@ how_it_works:
 # testimonials
 testimonials:   
   enable: true
-  subtitle: "Our Testimonial"
+  subtitle: "Our Testimonials"
   title: "Don't take our word for it"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin."
   image_left: "images/testimonials-01.png"
