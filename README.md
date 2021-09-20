@@ -30,25 +30,25 @@
 
 Featurees | [Andromeda LIght](https://github.com/gethugothemes/andromeda-light)  | [Andromeda Premium](https://gethugothemes.com/products/andromeda/?ref=github) | 
 :------------ |    :----:    |     :----:    | 
-Google analytics support                   | :white_check_mark: | :white_check_mark:                |
-image optimize with hugo pipe              | :white_check_mark: | :white_check_mark:                |
-CSS and Js bundle with hugo pipe           | :white_check_mark: | :white_check_mark:                |
-Netlify settings predefine                 | :white_check_mark: | :white_check_mark:                |
-Google font loads from webfont loader      | :white_check_mark: | :white_check_mark:                |
-Color and fonts variable in config file    | :white_check_mark: | :white_check_mark:                |
-Contact form Support (formspree)           | :white_check_mark: | :white_check_mark:                |
-GDPR consent enable                        | :white_check_mark: | :white_check_mark:                |
-Post reading time calculator               | :white_check_mark: | :white_check_mark:                |
-Google page speed optimized                | :white_check_mark: | :white_check_mark:                |
-Open graph meta tag                        | :white_check_mark: | :white_check_mark:                |
-Twitter card meta tag                      | :white_check_mark: | :white_check_mark:                |
-Multiple language support (Fr, En)         | :heavy_multiplication_x: | :white_check_mark: |
-Multiple author and single author          | :heavy_multiplication_x: | :white_check_mark: |
-Forestry cms pre-configured                | :heavy_multiplication_x: | :white_check_mark: |
-Caching enable                             | :heavy_multiplication_x: | :white_check_mark: |
-9+ Premium Pages                           | :heavy_multiplication_x: | :white_check_mark: |
-Priority Support                           | :heavy_multiplication_x: | :white_check_mark: |
-Get It Now | [![download-light](https://user-images.githubusercontent.com/88376439/132500272-dbe39bc0-bb69-4292-b72c-27599bf1bac5.png)](https://github.com/gethugothemes/andromeda-light/archive/refs/heads/master.zip) | [![download](https://user-images.githubusercontent.com/88376439/132500074-35ed470a-481c-49cb-ba05-ea0523da63e2.png)](https://gethugothemes.com/products/andromeda/?ref=github)
+Google analytics support                   | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+image optimize with hugo pipe              | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+CSS and Js bundle with hugo pipe           | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Netlify settings predefine                 | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Google font loads from webfont loader      | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Color and fonts variable in config file    | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Contact form Support (formspree)           | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+GDPR consent enable                        | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Post reading time calculator               | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Google page speed optimized                | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Open graph meta tag                        | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Twitter card meta tag                      | ![](https://demo.gethugothemes.com/icons/tick.png) | ![](https://demo.gethugothemes.com/icons/tick.png)                |
+Multiple language support (Fr, En)         | ![](https://demo.gethugothemes.com/icons/x.png) | ![](https://demo.gethugothemes.com/icons/tick.png) |
+Multiple author and single author          | ![](https://demo.gethugothemes.com/icons/x.png) | ![](https://demo.gethugothemes.com/icons/tick.png) |
+Forestry cms pre-configured                | ![](https://demo.gethugothemes.com/icons/x.png) | ![](https://demo.gethugothemes.com/icons/tick.png) |
+Caching enable                             | ![](https://demo.gethugothemes.com/icons/x.png) | ![](https://demo.gethugothemes.com/icons/tick.png) |
+9+ Premium Pages                           | ![](https://demo.gethugothemes.com/icons/x.png) | ![](https://demo.gethugothemes.com/icons/tick.png) |
+Priority Support                           | ![](https://demo.gethugothemes.com/icons/x.png) | ![](https://demo.gethugothemes.com/icons/tick.png) |
+Get It Now | [![download-light](https://demo.gethugothemes.com/icons/download.png)](https://github.com/gethugothemes/andromeda-light/archive/refs/heads/master.zip) | [![download](https://demo.gethugothemes.com/icons/grab.png)](https://gethugothemes.com/products/andromeda/?ref=github)
 
 
 ## Local development
