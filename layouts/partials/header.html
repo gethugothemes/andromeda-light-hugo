@@ -21,12 +21,7 @@
               </button>
 
               <div class="collapse navbar-collapse" id="navHeader">
-                <ul class="navbar-nav mx-auto">
-
-                  <li class="nav-item {{if .IsHome}}active{{end}}">
-                    <a class="nav-link" href="{{ site.BaseURL | relLangURL }}">Home</a>
-                  </li>
-                  
+                <ul class="navbar-nav mx-auto">                  
                   {{ $currentPage := . }}
                   {{ range site.Menus.main }}
 

@@ -1,8 +1,13 @@
 # main menu
 [[main]]
+name = "Home"
+url = ""
+weight = 1
+
+[[main]]
 name = "About"
 url = "about/"
-weight = 1
+weight = 2
 
 [[main]]
 name = "Blog"
