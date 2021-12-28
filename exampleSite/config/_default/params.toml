@@ -30,6 +30,9 @@ buy_premium_popup = true
 # Main Sections
 mainSections= ["blog"]
 
+# reading time for blog posts
+reading_time = true
+
 # contact information
 [contact_info]
 address = "2118 Thornridge Cir. Syracuse, Connecticut 35624"

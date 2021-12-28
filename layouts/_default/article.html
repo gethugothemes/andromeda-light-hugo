@@ -33,7 +33,7 @@
           {{ with .Params.author_info }}
           <p class="font-weight-500 mb-0 h5">{{ .name }}</p>
           {{ end }}
-          <span>{{.PublishDate.Format "Jan 02, 2006"}} - {{.ReadingTime}} Min read</span>
+          <span>{{.PublishDate.Format "Jan 02, 2006"}}{{if site.Params.reading_time}} - {{.ReadingTime}} Min read{{end}}</span>
         </div>
       </div>
     </div>
