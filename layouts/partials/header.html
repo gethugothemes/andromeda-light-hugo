@@ -9,7 +9,7 @@
                 {{ $logo:= site.Params.logo }}
                 {{ if fileExists (add `assets/` $logo) }}
                 {{ $logo:= resources.Get $logo }}
-                <img loading="prelaod" decoding="async" class="img-fluid" width="{{site.Params.logo_width}}" height="45" src="{{$logo.RelPermalink}}" alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{$logo.RelPermalink}}'">
+                <img loading="preload" decoding="async" class="img-fluid" width="{{site.Params.logo_width}}" height="45" src="{{$logo.RelPermalink}}" alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{$logo.RelPermalink}}'">
                 {{ else }}
                 {{site.Params.logo_text | markdownify}}
                 {{ end }}
