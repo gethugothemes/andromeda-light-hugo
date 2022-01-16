@@ -56,12 +56,12 @@
                   {{ end }}
                   {{ end }}
                 </ul>
-        
+                
+                {{ if site.Params.navigation_button.enable }}
                 <div class="navbar-right">
-                  {{ if site.Params.navigation_button.enable }}
                   <a href="{{ site.Params.navigation_button.link | relURL }}" class="btn btn-primary">{{ site.Params.navigation_button.label }}</a>
-                  {{ end }}
                 </div>
+                {{ end }}
               </div>
           </nav>
         </div>
