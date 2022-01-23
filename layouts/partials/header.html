@@ -21,7 +21,8 @@
               </button>
 
               <div class="collapse navbar-collapse" id="navHeader">
-                <ul class="navbar-nav mx-auto">                  
+                {{ $navButton:= site.Params.navigation_button.enable }}
+                <ul class="navbar-nav {{if $navButton}}mx-auto{{ else }}ml-auto{{end}}">                  
                   {{ $currentPage := . }}
                   {{ range site.Menus.main }}
 
@@ -57,11 +58,11 @@
                   {{ end }}
                 </ul>
         
+                {{ if $navButton }}
                 <div class="navbar-right">
-                  {{ if site.Params.navigation_button.enable }}
                   <a href="{{ site.Params.navigation_button.link | relURL }}" class="btn btn-primary">{{ site.Params.navigation_button.label }}</a>
-                  {{ end }}
                 </div>
+                {{ end }}
               </div>
           </nav>
         </div>

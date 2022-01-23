@@ -10,7 +10,7 @@ logo_text = "Andromeda"
 # OpenGraph / Twitter Card metadata
 description = "This is meta description"
 author = "Themefisher"
-image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
+image = "images/logo.png"                # this image will be used as fallback if a page has no image of its own
 
 # footer information
 footer_info = "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat."
@@ -22,13 +22,13 @@ contact_form_action = "https://formspree.io/f/xgernlzd" # contact form works wit
 copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
 
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
-custom_script= "" 
+custom_script = ""
 
 # buy premium popup
 buy_premium_popup = true
 
 # Main Sections
-mainSections= ["blog"]
+mainSections = ["blog"]
 
 # reading time for blog posts
 reading_time = true
@@ -78,7 +78,7 @@ link = "#!"
 
 [[social]]
 title = "AndromedaTweet"
-icon = "lab la-twitter" # https://icons8.com/line-awesome
+icon = "lab la-twitter"  # https://icons8.com/line-awesome
 link = "#!"
 
 [[social]]
