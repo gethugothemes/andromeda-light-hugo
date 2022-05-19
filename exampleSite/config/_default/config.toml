@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://demo.gethugothemes.com/andromeda-light/examplesite/"
+baseURL = "https://demo.gethugothemes.com/andromeda-light/site/"
 title = "Andromeda-light - Software and SAAS Landing Hugo Theme"
 theme = "andromeda-light"
 # post pagination
@@ -35,7 +35,7 @@ maxAge = "720h"
 
 [markup]
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
 
 [mediaTypes]
 [mediaTypes."application/manifest+json"]
