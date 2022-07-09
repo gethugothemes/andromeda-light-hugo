@@ -1,7 +1,7 @@
 [build]
   publish = "public"
   command = "hugo --minify --gc"
-  
+
 [build.environment]
   HUGO_VERSION = "0.85.0"
   HUGO_BASEURL = "/"
@@ -14,3 +14,7 @@
   X-XSS-Protection = "1; mode=block"
   Referrer-Policy = "same-origin"
   Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+  Content-Security-Policy = """
+    default-src 'self';
+    script-src 'self' 'unsafe-eval' apis.google.com;
+    object-src 'self'"""
