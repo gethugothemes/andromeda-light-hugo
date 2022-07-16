@@ -1,8 +1,6 @@
 ##### Optimize default expiration time - BEGIN
 <IfModule mod_expires.c>
 
-  "content_security_policy": "script-src 'self' https://apis.google.com/js/api.js 'unsafe-eval'; object-src 'self'"
-  
   ## Enable expiration control
   ExpiresActive On
 
