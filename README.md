@@ -1,4 +1,7 @@
-# <h1 align=center>Andromeda Light | <a target="_blank" href="https://demo.gethugothemes.com/andromeda-light" rel="nofollow">Demo</a> | <a  target="_blank" href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fandromeda-light%2F">Page Speed (92%)</a></h1>
+# <h1 align=center>Andromeda Light</h1>
+<p align=center> Andromeda is a multipurpose SaaS theme designed to showcase any SaaS product or solution.</p>
+<h2 align="center"><a target="_blank" href="https://demo.gethugothemes.com/andromeda-light" rel="nofollow">Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fandromeda%2Fsite%2F&form_factor=desktop">Page Speed (98%)</a> </h2>
+
 
 <p align=center>
   <a href="https://github.com/gohugoio/hugo/releases/tag/v0.83.1" alt="Contributors">
@@ -134,6 +137,6 @@ If you need to customize the theme or complete website development from scratch,
 <!-- premium themes -->
 ## Premium Themes By Us
 
-| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png)](https://gethugothemes.com/bundle/?utm_source=andromeda_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Delta](https://demo.gethugothemes.com/thumbnails/delta.png)](https://gethugothemes.com/products/delta/) | [![Bizcraft](https://demo.gethugothemes.com/thumbnails/agico.png)](https://gethugothemes.com/products/agico-hugo-theme/) |
+| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png?)](https://gethugothemes.com/bundle/?utm_source=andromeda_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Delta](https://demo.gethugothemes.com/thumbnails/delta.png)](https://gethugothemes.com/products/delta/) | [![Bizcraft](https://demo.gethugothemes.com/thumbnails/agico.png)](https://gethugothemes.com/products/agico-hugo-theme/) |
 |:---:|:---:|:---:|
-| **Get 50+ Premium Hugo Themes Bundle** | **Delta** | **Agico** |
+| **Get 55+ Premium Hugo Themes Bundle** | **Delta** | **Agico** |
