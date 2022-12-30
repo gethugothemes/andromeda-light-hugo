@@ -1,0 +1,68 @@
+#################### default parameters ################################
+# favicon
+favicon = "images/favicon.png"
+# logo
+logo = "images/logo.png"
+# use `x` with logo_width, example: "100x"
+logo_width = "40x"
+# logo text will only show when logo is missing.
+logo_text = "Velocapi"
+# OpenGraph / Twitter Card metadata
+description = "Free Website and API monitoring - Make sure that your Website and APIs stay up and work as expected"
+author = "Velocapi"
+image = "images/logo.png"                # this image will be used as fallback if a page has no image of its own
+
+# footer information
+footer_info = "Monitoring websites and API endpoints made easy."
+
+# contact form action
+contact_form_action = "https://formspree.io/f/xgernlzd" # contact form works with https://formspree.io
+
+# copyright
+copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
+
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
+custom_script = ""
+
+# Main Sections
+mainSections = ["blog"]
+
+# reading time for blog posts
+reading_time = true
+
+# contact information
+[contact_info]
+address = "Munich, Germany"
+phone = []
+email = ["support@velocapi.com"]
+
+# imaging processing
+[imaging]
+# Default JPEG or WebP quality setting. Default is 100.
+quality = 100
+
+# Preloader
+[preloader]
+enable = true
+preloader = "images/favicon.png" # use jpg, png, svg or gif format.
+
+# Navigation button
+[navigation_button]
+enable = true
+label = "Sign Up"
+link = "https://app.velocapi.com/auth/signup"
+
+# cookies
+[cookies]
+enable = false
+expire_days = 2
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+button = "I Accept"
+
+# call-to-action
+[cta]
+enable = true
+title = "Get Started For Free Now"
+content = "Start to monitor your Website and API and do no longer worry about unexpected issues and downtime."
+button = "Sign Up"
+button_link = "https://app.velocapi.com/auth/signup"

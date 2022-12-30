@@ -1,4 +1,4 @@
-# This file is for render site varibles and plugins
+# This file is for render site variables and plugins
 # don't remove this file.
 # The presence of this file is for compatibility with Blogdown and Forestry.
 #
@@ -11,7 +11,7 @@
 white = "#ffffff"
 black = "#000000"
 light = "#FAFAFA"
-primary_color = "#FE6019"
+primary_color = "#FD7E14"
 
 # font variable
 h1 = "48px"

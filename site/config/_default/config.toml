@@ -1,15 +1,11 @@
 ######################## default configuration ####################
-baseURL = "https://demo.gethugothemes.com/andromeda-light/site/"
-title = "Andromeda-light - Software and SAAS Landing Hugo Theme"
+baseURL = "https://velocapi.com"
+title = "Website and API Monitoring | Velocapi"
 theme = "landing-page"
 # post pagination
 paginate = "6"
 # post excerpt
 summaryLength = "10"
-# google analytics
-googleAnalytics = "" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
-# disqus short name
-disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
 
 ############################# Modules ##############################
 [module]
