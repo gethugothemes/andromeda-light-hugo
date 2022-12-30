@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL = "https://velocapi.com"
 title = "Website and API Monitoring | Velocapi"
-theme = "landing-page"
+theme = "default"
 # post pagination
 paginate = "6"
 # post excerpt
