@@ -15,12 +15,6 @@ image = "images/logo.png"                # this image will be used as fallback i
 # footer information
 footer_info = "Monitoring websites and API endpoints made easy."
 
-# contact form action
-contact_form_action = "https://formspree.io/f/xgernlzd" # contact form works with https://formspree.io
-
-# copyright
-copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
-
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
 custom_script = ""
 
