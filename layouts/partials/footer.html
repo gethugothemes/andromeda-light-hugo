@@ -88,14 +88,13 @@
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
         <div class="footer-widget">
-          <h3 class="mb-4 h4">Location &amp; Contact</h3>
+          <h3 class="mb-4 h4">Contact</h3>
 
           {{with site.Params.contact_info}}
           <ul class="footer-links list-unstyled">
-            <li>{{.address | markdownify}}</li>
-            {{range first 1 .phone}}
+            {{range first 1 .email}}
             {{if .}}
-            <li><a href="tel:{{.}}">{{.}}</a></li>
+            <li><a href="mailto:{{.}}">{{.}}</a></li>
             {{end}}
             {{end}}
           </ul>

@@ -32,8 +32,6 @@ reading_time = true
 
 # contact information
 [contact_info]
-address = "Munich, Germany"
-phone = []
 email = ["support@velocapi.com"]
 
 # imaging processing
