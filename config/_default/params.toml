@@ -55,6 +55,6 @@ button = "I Accept"
 [cta]
 enable = true
 title = "Get Started For Free Now"
-content = "Start to monitor your Website and API and do no longer worry about unexpected issues and downtime."
+content = "Start to monitor your Website and API and do no longer worry about unnoticed issues and downtime."
 button = "Sign Up"
 button_link = "https://app.velocapi.com/auth/signup"

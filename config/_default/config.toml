@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://velocapi.com"
+baseURL = "https://velocapi.com/"
 title = "Website and API Monitoring | Velocapi"
 theme = "default"
 # post pagination

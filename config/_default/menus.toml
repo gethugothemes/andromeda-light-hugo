@@ -1,2 +1,10 @@
 # main menu
-# Currently empty
+[[main]]
+name = "Home"
+url = ""
+weight = 1
+
+[[main]]
+name = "Blog"
+url = "blog/"
+weight = 2
