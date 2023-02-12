@@ -1,14 +1,13 @@
 ---
-date: "2023-01-28"
+date: "2023-02-12"
 title: "Getting started with Velocapi"
-image: "images/home/target-details.png"
 author_info: 
   name: "Velocapi"
   image: "images/logo.png"
 draft: false
 ---
 
-Velocapi helps you to easily monitor your website or API endpoints to make sure that they are up and behave as expected.
+Velocapi helps you to easily monitor your websites and API endpoints to make sure that they are up and behave as expected.
 The [Velocapi web app](https://app.velocapi.com) provides an overview at a glance and our integration with Discord and Telegram will always keep 
 you up to date.
 
@@ -17,27 +16,39 @@ From there on, we'll walk you through the process of adding your first monitorin
 It only takes about a minute!
 
 ### Monitor Your First Target
-Log in to Velocapi and create a new target via the + button in the bottom right corner.
-In the opened dialog, enter a URL, for example, `https://velocapi.com` and click on the `Monitor Target` button.
-That's it! You've just added your first target to the monitoring.
+Log in to Velocapi and create a new target via the *Monitor Your First Target* (1) button:
+{{< image src="images/blog/post-1/first-target-create.png" >}}
 
+In the opened dialog, enter a URL (1), for example `https://velocapi.com`, and click on the `Monitor Target` button (2).
+{{< image src="images/blog/post-1/first-target-create-dialog.png" >}}
+
+That's it! You've just added your first target to the monitoring.
 With the default settings, the target will be queried every 5 minutes.
 
+For more complex use cases, there are a lot more options to configure your targets for example by changing the HTTP method, adding custom HTTP headers or validation options.
 
-Laoreet mauris odio ut nec. Nisl, sed adipiscing dignissim arcu placerat ornare pharetra nec in. Ultrices in nisl potenti vitae tempus. Auctor consectetur luctus eu in amet sagittis. Dis urna, vel hendrerit convallis Senectus feugiat faucibus commodo egestas leo vitae in morbi. Enim arcu dignissim mauris, eu, eget
+### Investigate the Status of Your Target
+With our first target in place, you can find information about the status of the latest request for your target directly on the dashboard (1).
+{{< image src="images/blog/post-1/targets-dashboard.png" >}}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla. Pretium, purus eu nec vulputate vel habitant egestas. Congue ornare at ipsum, viverra. Vitae magna faucibus eros, lectus sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit in ornare turpis posuere. Eu quisque integer non rhoncus elementum vel. Quis nec viverra lectus augue nec praesent
+To get more details, you can check out the target insights by clicking on the rightmost button in the *Actions* column (2).
+The target insights contain information about the target (1), recent incidents (2), response times (3), and statistics (4).
+{{< image src="images/blog/post-1/target-details.png" >}}
 
-Pharetra odio amet pellentesque. Egestas nisi adipiscing sed in lectus. Vitae ultrices malesuada aliquet Faucibus consectetur tempus adipiscing vitae. Nec blandit tincidunt nibh nisi, quam volutpat. In lacus laoreet diam risus. Mauris, risus faucibus sagittis sagittis tincidunt id justo. Diam massa pretium consequat mauris viverra. Sagittis eu libero
+### Get Notified About Incidents
+To reduce the time from an incident to its resolution, we recommend that you set up the notification client of your choice to be notified of each incident as soon as it occurs.
 
->Facing a challenge in life is kind of a turn-on for an easy rider. When life gives you lemons, use them in your designs
->
-> <cite>!Alexender Smith</cite>
+Currently, Velocapi integrates with [Discord](https://discord.com/) and [Telegram](https://telegram.org/).
+To connect to the open the settings page (1) in the web application.
+Here, you can add either add the Velocapi Discord bot (2) to your discord server or the Telegram bot (3) to your account by clicking the respective link.
 
-{{< image src="images/blog/01.jpg"  >}}
+We provide commands to retrieve instructions for both the Discord and Telegram bot. 
+For discord, send `!setup` to the Velocapi bot. For `Telegram`, send  `\setup`.
 
-Consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla. Pretium, purus eu nec vulputate vel habitant egestas. Congue ornare at ipsum, viverra. Vitae magna faucibus eros, lectus sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit in ornare turpis posuere. Eu quisque integer non rhoncus elementum vel. Quis nec viverra lectus augue nec praesent volutpat tortor. Ipsum eget sed tempus luctus nisl. Ut etiam molestie mattis at faucibus mi at pellentesque. Pellentesque morbi nunc, curabitur arcu euismod suscipit. Duis mi sapien, donec non dictum
+{{< image src="images/blog/post-1/settings.png" >}}
 
-Laoreet mauris odio ut nec. Nisl, sed adipiscing dignissim arcu placerat ornare pharetra nec in. Ultrices in nisl potenti vitae tempus. Auctor consectetur luctus eu in amet sagittis. Dis urna, vel hendrerit convallis cursus id.
+The bot will respond with your user ID that you can then copy into the respective input field (4, 5) in the Velocapi web application.
+Finally, select the Notification client of your choice (6) and save the settings (7).
 
-Senectus feugiat faucibus commodo egestas leo vitae in morbi. Enim arcu dignissim mauris, eu, eget pharetra odio amet pellentesque. Egestas nisi adipiscing sed in lectus. Vitae ultrices malesuada aliquet dignissim. Faucibus non tristique eu.
+With that, you are good to go to stay on top of any incidents!
+
