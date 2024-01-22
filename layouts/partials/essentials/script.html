@@ -1,0 +1,26 @@
+<!-- JS Plugins + Main script -->
+{{ $scripts := slice }}
+{{ range site.Params.plugins.js }}
+  {{ if findRE "^http" .link }}
+    <script
+      src="{{ .link | relURL }}"
+      type="application/javascript"
+      {{ .attributes | safeHTMLAttr }}></script>
+  {{ else }}
+    {{ $scripts = $scripts | append (resources.Get .link) }}
+  {{ end }}
+{{ end }}
+{{ $scripts := $scripts | append (resources.Get "js/script.js" | minify) }}
+{{ $scripts := $scripts | resources.Concat "/js/script.js" | minify | fingerprint "sha512" }}
+<script crossorigin="anonymous" defer="defer" integrity="{{ $scripts.Data.Integrity }}" type="application/javascript">{{$scripts.Content | safeJS}}</script>
+
+<!-- progressive web app -->
+{{ partialCached "pwa.html" . }}
+
+
+<!-- cookie consent -->
+{{ partialCached "cookie-consent.html" . }}
+
+
+<!-- google adsense -->
+{{ partialCached "adsense-script.html" . }}
