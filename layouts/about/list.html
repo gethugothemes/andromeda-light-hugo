@@ -212,7 +212,7 @@
             {{ with site.GetPage (string .Params.clients.section) }}
               {{ with .Params.brands_carousel }}
                 <div class="col-md-12" data-aos="fade-left">
-                  <div class="brand-carousel swiper-container border-0 mt-0">
+                  <div class="brand-carousel swiper border-0 mt-0">
                     <div class="swiper-wrapper">
                       {{ range .brand_images }}
                         {{ if fileExists (add `assets/` .) }}

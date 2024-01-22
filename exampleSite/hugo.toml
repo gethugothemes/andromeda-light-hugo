@@ -149,7 +149,7 @@ link = "plugins/bootstrap/bootstrap.min.css"
 [[params.plugins.css]]
 link = "plugins/line-awesome/css/line-awesome.min.css"
 [[params.plugins.css]]
-link = "plugins/swiper/swiper-bundle.min.css"
+link = "plugins/swiper/swiper-bundle.css"
 [[params.plugins.css]]
 link = "plugins/aos/aos.css"
 
@@ -161,8 +161,20 @@ link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
 link = "plugins/aos/aos.js"
 [[params.plugins.js]]
-link = "plugins/swiper/swiper-bundle.min.js"
-[[params.plugins.js]]
 link = "plugins/rellax/rellax.min.js"
 [[params.plugins.js]]
-link = "plugins/webfont-loader/webfont-loader-2.min.js"
+link = "plugins/swiper/swiper-bundle.js"
+[[params.plugins.js]]
+link = "plugins/cookie.js"
+[[params.plugins.js]]
+link = "plugins/glightbox/glightbox.js"
+[[params.plugins.js]]
+link = "js/gallery-slider.js"
+[[params.plugins.js]]
+link = "js/accordion.js"
+[[params.plugins.js]]
+link = "js/tab.js"
+[[params.plugins.js]]
+link = "js/modal.js"
+[[params.plugins.js]]
+link = "plugins/youtube-lite.js"

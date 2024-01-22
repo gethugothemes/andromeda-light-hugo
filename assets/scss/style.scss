@@ -6,7 +6,7 @@ $light: {{.light | default "#FAFAFA"}};
 $primary-color: {{.primary_color | default "#FE6019"}};
 
 
-// Font Variables
+// Typography Variables
 $h1: {{.h1 | default "48px"}};
 $h1-md: {{.h1_md | default "38px"}};
 $h2: {{.h2 | default "38px"}};
@@ -24,10 +24,20 @@ $icon-font: '{{.icon_font | default "Font Awesome 5 Free"}}';
 {{ end }}
 
 
+// @import 'templates/bootstrap';
+
+@import 'preloader';
 @import 'mixins';
 @import 'typography';
 @import 'buttons';
 @import 'common';
-@import 'templates/navigation.scss';
-@import 'templates/main.scss';
-@import 'custom.scss';
+@import 'templates/navigation';
+@import 'templates/main';
+@import 'notice';
+@import "social-share";
+@import "gallery-slider";
+@import "images";
+@import "toc";
+@import "tab";
+@import "accordion";
+@import 'custom';
