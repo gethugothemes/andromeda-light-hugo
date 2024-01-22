@@ -2,8 +2,9 @@
 extended = true
 min = "0.118.0"
 
+
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/search"
+path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/pwa"
@@ -13,15 +14,6 @@ path = "github.com/gethugothemes/hugo-modules/images"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/videos"
-
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/icons/font-awesome"
-
-# [[imports]]
-# path = "github.com/gethugothemes/hugo-modules/icons/themify-icons"
-
-[[imports]]
-path = "github.com/gethugothemes/hugo-modules/gzip-caching"
 
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/adsense"
