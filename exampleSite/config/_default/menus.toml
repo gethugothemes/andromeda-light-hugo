@@ -1,3 +1,5 @@
+############# English navigation ##############
+
 # main menu
 [[main]]
 name = "Home"
@@ -29,7 +31,7 @@ hasChildren = true
   parent = "Pages"
   name = "Terms & Conditions"
   url = "terms-and-conditions/"
-  weight = 7
+  weight = 2
   
 [[main]]
 name = "Contact"
