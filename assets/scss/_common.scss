@@ -7,6 +7,10 @@ body {
   line-height: 1.7;
 }
 
+a {
+  text-decoration: none;
+}
+
 ::selection {
   color: $white;
   background-color: darken($primary-color, 5);
@@ -98,11 +102,10 @@ body {
   }
 }
 
-
 // swiper
 .swiper-wrapper {
   cursor: grab;
-  transition-timing-function: cubic-bezier(.165, .84, .44, 1) !important;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 }
 
 .swiper-pagination-bullet {
@@ -113,7 +116,6 @@ body {
 .swiper-pagination-bullet-active {
   background: $primary-color !important;
 }
-
 
 // aos background animation
 .has-bg-anim {
@@ -128,7 +130,7 @@ body {
     background-color: lighten($primary-color, 83);
     transform: scale(0);
     border-radius: 30px;
-    transition: 1.5s cubic-bezier(.105, .84, .44, 1);
+    transition: 1.5s cubic-bezier(0.105, 0.84, 0.44, 1);
   }
 
   &.aos-animate::before {
@@ -137,12 +139,11 @@ body {
   }
 }
 
-
 // social-links
 .social-links {
   a {
     font-size: 18px;
-    color: rgba($black, .8);
+    color: rgba($black, 0.8);
     border: 1px solid #eee;
     display: inline-block;
     height: 45px;
@@ -158,7 +159,6 @@ body {
   }
 }
 
-
 // has-circle
 .has-circle {
   position: relative;
@@ -170,51 +170,50 @@ body {
 
     &.fill {
       background-color: $primary-color;
-      opacity: .9
+      opacity: 0.9;
     }
 
     &.ratio-20 {
       height: 20px;
-      width: 20px
+      width: 20px;
     }
 
     &.ratio-32 {
       height: 32px;
-      width: 32px
+      width: 32px;
     }
 
     &.ratio-37 {
       height: 37px;
-      width: 37px
+      width: 37px;
     }
 
     &.ratio-47 {
       height: 47px;
-      width: 47px
+      width: 47px;
     }
 
     &.ratio-62 {
       height: 62px;
-      width: 62px
+      width: 62px;
     }
 
     &.ratio-65 {
       height: 65px;
-      width: 65px
+      width: 65px;
     }
 
     &.ratio-73 {
       height: 73px;
-      width: 73px
+      width: 73px;
     }
 
     &.ratio-85 {
       height: 85px;
-      width: 85px
+      width: 85px;
     }
   }
 }
-
 
 // preloader
 .preloader {
@@ -229,17 +228,20 @@ body {
   align-items: center;
   justify-content: center;
   .la-spin {
-    animation: la-spin .5s infinite linear;
+    animation: la-spin 0.5s infinite linear;
   }
 }
 
 // link-primary
 .link-primary {
-  color: $primary-color;
+  color: $primary-color !important;
+
+  transition-property: color, opactiy;
 
   &:hover {
-    color: darken($primary-color, 5);
+    color: darken($primary-color, 5) !important;
     text-decoration: underline;
+    text-decoration-color: $primary-color !important;
   }
 }
 
@@ -247,29 +249,29 @@ body {
   color: $white !important;
   font-size: 12px;
   font-weight: 600;
-  padding: .45em .8em;
+  padding: 0.45em 0.8em;
   border-radius: 4px;
   position: relative;
   top: 10px;
 
   &.badge-changed {
-    background-color: #3A9CFF
+    background-color: #3a9cff;
   }
 
   &.badge-added {
-    background-color: #00CE92
+    background-color: #00ce92;
   }
 
   &.badge-removed {
-    background-color: #973CFF
+    background-color: #973cff;
   }
 
   &.badge-security {
-    background-color: #9C275F
+    background-color: #9c275f;
   }
 
   &.badge-depreciate {
-    background-color: #FF3158
+    background-color: #ff3158;
   }
 }
 
@@ -343,7 +345,7 @@ body {
         content: "";
         height: 7px;
         width: 7px;
-        background-color: rgba($primary-color, .8);
+        background-color: rgba($primary-color, 0.8);
         top: 10px;
         left: 0;
         border-radius: 50%;
@@ -354,7 +356,7 @@ body {
   blockquote {
     padding: 20px 40px;
     padding-top: 10px;
-    color: lighten($black, 20.00);
+    color: lighten($black, 20);
     font-weight: 500;
     font-size: 20px;
     margin: 38px 0;
@@ -364,7 +366,7 @@ body {
     border: 1px solid #fbf2e5;
 
     &::before {
-      font-family: 'Line Awesome Free';
+      font-family: "Line Awesome Free";
       font-weight: 900;
       content: "\f10d";
       font-size: 56px;
@@ -377,7 +379,7 @@ body {
       border-top: 1px solid #fbf2e5;
       display: block;
       font-size: 16px;
-      opacity: .7;
+      opacity: 0.7;
       margin-top: 20px;
       padding-top: 15px;
       font-weight: 400;
@@ -416,7 +418,6 @@ body {
   }
 }
 
-
 // form-control
 .form-control {
   border: 0;
@@ -424,13 +425,13 @@ body {
   border: 2px solid lighten(saturate(adjust-hue($primary-color, 16), 0), 42.94);
   border-left-color: lighten($primary-color, 20);
   height: 56px;
-  transition: .3s ease;
+  transition: 0.3s ease;
   background-color: lighten(saturate(adjust-hue($primary-color, 16), 0), 42.94);
 
   &:focus {
     box-shadow: none;
-    color: lighten($black, 20.00);
-    border-bottom-color: lighten($black, 20.00);
+    color: lighten($black, 20);
+    border-bottom-color: lighten($black, 20);
     border-color: lighten($primary-color, 20);
   }
 }
@@ -441,9 +442,13 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.form-group {
+  margin-bottom: 30px;
+}
 
 form label {
   font-weight: 600;
+  margin-bottom: 10px;
   color: lighten($black, 33.33);
 }
 
@@ -454,21 +459,21 @@ form label {
     border-radius: 0;
   }
 
-  .custom-control-input:checked~.custom-control-label::before,
-  .custom-control-input:not(:disabled):active~.custom-control-label::before {
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     background-color: $primary-color;
     border-color: $primary-color;
     box-shadow: none;
   }
 
-  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
     box-shadow: none;
     border-color: $primary-color;
   }
 
-  .custom-control-input:disabled:checked~.custom-control-label::before {
-    background-color: rgba($primary-color, .5);
-    border-color: rgba($primary-color, .2);
+  .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba($primary-color, 0.5);
+    border-color: rgba($primary-color, 0.2);
   }
 }
 
@@ -476,41 +481,40 @@ form label {
  # helper classes
 -------------------------------------------------------------------*/
 .primary-font {
-  font-family: $primary-font
+  font-family: $primary-font;
 }
 
 .font-weight-400 {
-  font-weight: 400
+  font-weight: 400;
 }
 
 .font-weight-500 {
-  font-weight: 500
+  font-weight: 500;
 }
 
 .font-weight-600 {
-  font-weight: 600
+  font-weight: 600;
 }
 
 .text-primary {
-  color: $primary-color !important
+  color: $primary-color !important;
 }
 
 a.text-primary:hover {
-  color: darken($primary-color, 10) !important
+  color: darken($primary-color, 10) !important;
 }
 
 .bg-primary {
-  background-color: $primary-color !important
+  background-color: $primary-color !important;
 }
 
 .bg-light {
-  background-color: $light !important
+  background-color: $light !important;
 }
 
 .border-primary {
-  border-color: $primary-color !important
+  border-color: $primary-color !important;
 }
-
 
 // buy-premium popup
 .buy-premium {
@@ -523,7 +527,7 @@ a.text-primary:hover {
     visibility: hidden;
     &.show {
       visibility: visible;
-    } 
+    }
   }
   @include mobile {
     display: none !important;
@@ -558,8 +562,12 @@ a.text-primary:hover {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    background-color: rgba($black, .4);
+    background-color: rgba($black, 0.4);
     top: 0;
     left: 0;
   }
+}
+
+*[class*="col-"] {
+  position: relative;
 }

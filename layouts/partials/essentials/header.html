@@ -24,10 +24,10 @@
           </a>
 
           <button
-            class="navbar-toggler ml-auto"
+            class="navbar-toggler ms-auto"
             type="button"
-            data-toggle="collapse"
-            data-target="#navHeader"
+            data-bs-toggle="collapse"
+            data-bs-target="#navHeader"
             aria-controls="navHeader"
             aria-expanded="false"
             aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
               class="navbar-nav {{ if $navButton }}
                 mx-auto
               {{ else }}
-                ml-auto
+                ms-auto
               {{ end }}">
               {{ $currentPage := . }}
               {{ range site.Menus.main }}
@@ -55,7 +55,7 @@
                       class="nav-link dropdown-toggle"
                       href="#"
                       role="button"
-                      data-toggle="dropdown"
+                      data-bs-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false">
                       {{ .Name }}

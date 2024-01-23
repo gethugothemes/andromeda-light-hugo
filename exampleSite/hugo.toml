@@ -144,8 +144,8 @@ icon_font = "Line Awesome Free"
 ############################# Plugins ##############################
 
 # CSS Plugins
-[[params.plugins.css]]
-link = "plugins/bootstrap/bootstrap.min.css"
+# [[params.plugins.css]]
+# link = "plugins/bootstrap/bootstrap.min.css"
 [[params.plugins.css]]
 link = "plugins/line-awesome/css/line-awesome.min.css"
 [[params.plugins.css]]
@@ -156,8 +156,8 @@ link = "plugins/aos/aos.css"
 # JS Plugins
 [[params.plugins.js]]
 link = "plugins/jquery/jquery.min.js"
-[[params.plugins.js]]
-link = "plugins/bootstrap/bootstrap.min.js"
+# [[params.plugins.js]]
+# link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
 link = "plugins/aos/aos.js"
 [[params.plugins.js]]

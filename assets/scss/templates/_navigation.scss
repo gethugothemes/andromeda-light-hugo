@@ -57,6 +57,7 @@ header {
     font-size: 36px;
     color: lighten($black, 13.33);
     border: 0;
+    box-shadow: none;
     transition: .3s ease;
 
     @include tablet {

@@ -44,5 +44,9 @@ github.com/gethugothemes/hugo-modules/table-of-contents v0.0.0-20240120062719-ef
 github.com/gethugothemes/hugo-modules/table-of-contents v0.0.0-20240120062719-ef21cc42d8bc/go.mod h1:bEDw4veccQQQYEdVrfu13ATRUWfW8ptDIjJZuhYh4Tw=
 github.com/gethugothemes/hugo-modules/videos v0.0.0-20240120062719-ef21cc42d8bc h1:YRb3xcwQwYHjtMxuDLsZT/AmuWOP8ZFhm9nbKNZpXjk=
 github.com/gethugothemes/hugo-modules/videos v0.0.0-20240120062719-ef21cc42d8bc/go.mod h1:P722lLWdnNhdZVq6gvMrOLqECUwrAYQWaOWlChta5H0=
+github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 h1:SmpwwN3DNzJWbV+IT8gaFu07ENUFpCvKou5BHYUKuVs=
+github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200/go.mod h1:kx8MBj9T7SFR8ZClWvKZPmmUxBaltkoXvnWlZZcSnYA=
+github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
+github.com/twbs/bootstrap v5.3.2+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/zeon-studio/hugoplate v0.0.0-20240110020211-1fe4fc478ee0 h1:r+LqGD3LVZ3F41mZYfhxBm5J1d7VSi5lYbtlkvMmtps=
 github.com/zeon-studio/hugoplate v0.0.0-20240110020211-1fe4fc478ee0/go.mod h1:YlRIwdTWidquf1dhtx+mDfu0I3KVrVQB4wi4UmHlK3E=

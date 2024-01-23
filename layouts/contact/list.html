@@ -8,7 +8,7 @@
         <div
           class="col-lg-5 col-md-8 text-center mb-5 mb-lg-0"
           data-aos="fade-up">
-          <div class="pr-0 pr-lg-5">
+          <div class="pe-0 pe-lg-5">
             {{ if fileExists (add `assets/` .Params.contact_image) }}
               {{ $img:= resources.Get .Params.contact_image }}
               {{ $img:= $img.Resize "575x" }}
@@ -55,15 +55,14 @@
                 <div class="form-group">
                   <label for="message">Your Message</label>
                   <textarea
-                    class="form-control shadow-none"
+                    class="form-control shadow-none h-auto"
                     id="message"
                     name="Comment"
-                    rows="4"
                     required></textarea>
                 </div>
 
                 <button
-                  class="btn btn-primary w-100 mt-4"
+                  class="btn btn-primary w-100"
                   type="submit"
                   aria-label="Send Message">
                   Send Message

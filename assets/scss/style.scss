@@ -24,7 +24,7 @@ $icon-font: '{{.icon_font | default "Font Awesome 5 Free"}}';
 {{ end }}
 
 
-// @import 'templates/bootstrap';
+@import 'templates/bootstrap';
 
 @import 'preloader';
 @import 'mixins';
