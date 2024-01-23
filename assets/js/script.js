@@ -47,14 +47,14 @@ $('.buy-premium .close').on('click', function () {
 	$('.buy-premium').removeClass('show');
 });
 
-// // header sticky
-// $(window).scroll(function () {
-// 	if ($(window).scrollTop() >= 50) {
-// 		$('.header-nav').addClass('header-sticky-top');
-// 	} else {
-// 		$('.header-nav').removeClass('header-sticky-top');
-// 	}
-// });
+// header sticky
+$(window).scroll(function () {
+	if ($(window).scrollTop() >= 50) {
+		$('.header-nav').addClass('header-sticky-top');
+	} else {
+		$('.header-nav').removeClass('header-sticky-top');
+	}
+});
 
 // on ready state
 $(document).ready(function () {
