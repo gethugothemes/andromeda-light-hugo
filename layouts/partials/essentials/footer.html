@@ -1,24 +1,34 @@
 {{ with site.Params.cta }}
   {{ if .enable }}
-    <section class="call-to-action has-bg-color">
-      <div class="container-xxl">
+    <section class="call-to-action has-bg-color overflow-hidden">
+      <div class="container-xxl position-relative">
         <div class="row">
           <div class="col-lg-12">
             <div class="block">
               <div class="section-title text-center mb-0" data-aos="fade-up">
                 <h2 class="title underline-none">{{ .title | markdownify }}</h2>
                 <p>{{ .content | markdownify }}</p>
-                <a href="{{ .button_link }}" class="btn btn-primary mt-4">
-                  {{ .button }}
-                </a>
+                <a href="{{ .button_link }}" class="btn btn-primary mt-4"
+                  >{{ .button }}</a
+                >
               </div>
             </div>
 
             <div class="has-circle has-bg-anim" data-aos="fade-in">
-              <img
-                class="wave-1 w-100"
-                src="{{ `images/waves/05.svg` | absURL }}"
-                alt="*" />
+              <svg
+                class="text-primary"
+                style="opacity:.12"
+                width="100%"
+                height="100%"
+                viewBox="0 0 1381 283"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1379 0.998871C1346.3 58.3528 1186.5 172.501 961.409 121.133C645.85 49.1205 596.5 68.5008 448.172 194.674C386.651 247.006 248.005 308.633 1 265.688"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-dasharray="10 10" />
+              </svg>
               <span class="circle-1 ratio-32"></span>
               <span class="circle-2 ratio-85 fill"></span>
               <span class="circle-3 ratio-47"></span>
@@ -42,36 +52,21 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">
-        <div class="border-top pb-5" data-aos="fade-up"></div>
+        <div class="border-top pb-5"></div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up">
+      <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="pe-4">
-          <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
-            {{ $logo:= site.Params.logo }}
-            {{ if fileExists (add `assets/` $logo) }}
-              {{ $logo:= resources.Get $logo }}
-              <img
-                loading="lazy"
-                decoding="async"
-                class="img-fluid mb-4"
-                width="{{ site.Params.logo_width }}"
-                height="45"
-                src="{{ $logo.RelPermalink }}"
-                alt="{{ site.Title }}"
-                onerror="this.onerror=null;this.src='{{ $logo.RelPermalink }}'" />
-            {{ else }}
-              {{ site.Params.logo_text | markdownify }}
-            {{ end }}
+          <a
+            class="navbar-brand d-inline-block mb-4"
+            href="{{ site.BaseURL | relLangURL }}">
+            {{ partial "logo.html" }}
           </a>
           <p class="mb-0">{{ site.Params.footer_info | markdownify }}</p>
         </div>
       </div>
-      <div
-        class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-sm-0"
-        data-aos="fade-up"
-        data-aos-delay="50">
+      <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-sm-0">
         <div class="footer-widget">
-          <h3 class="mb-4 h4">Socials</h3>
+          <h4 class="mb-4">{{ T `socials` }}</h4>
 
           {{ with site.Params.contact_info.email }}
             <ul class="footer-links list-unstyled mb-4">
@@ -83,26 +78,24 @@
             </ul>
           {{ end }}
 
-          {{ with site.Params.social }}
-            <ul class="social-links list-inline">
-              {{ range . }}
-                <li class="list-inline-item">
-                  <a href="{{ .link }}" title="{{ .title }}">
-                    <i class="{{ .icon }}"></i>
-                  </a>
-                </li>
-              {{ end }}
-            </ul>
-          {{ end }}
-
+          <ul class="social-links list-inline">
+            {{ range site.Data.social.main }}
+              <li class="list-inline-item">
+                <a
+                  target="_blank"
+                  aria-label="{{ .title }}"
+                  rel="nofollow noopener"
+                  href="{{ .link | safeURL }}">
+                  <i class="{{ .icon }}"></i>
+                </a>
+              </li>
+            {{ end }}
+          </ul>
         </div>
       </div>
-      <div
-        class="col-lg-2 col-md-6 col-sm-6 mt-5 mt-lg-0"
-        data-aos="fade-up"
-        data-aos-delay="100">
+      <div class="col-lg-2 col-md-6 col-sm-6 mt-5 mt-lg-0">
         <div class="footer-widget">
-          <h3 class="mb-4 h4">Quick Links</h3>
+          <h4 class="mb-4">{{ T `quick_links` }}</h4>
 
           <ul class="footer-links list-unstyled">
             {{ range site.Menus.footer }}
@@ -111,12 +104,9 @@
           </ul>
         </div>
       </div>
-      <div
-        class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-lg-0"
-        data-aos="fade-up"
-        data-aos-delay="150">
+      <div class="col-lg-3 col-md-6 col-sm-6 mt-5 mt-lg-0">
         <div class="footer-widget">
-          <h3 class="mb-4 h4">Location &amp; Contact</h3>
+          <h4 class="mb-4">{{ T `location_contact` }}</h4>
 
           {{ with site.Params.contact_info }}
             <ul class="footer-links list-unstyled">

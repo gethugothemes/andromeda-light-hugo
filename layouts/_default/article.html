@@ -1,0 +1,47 @@
+<article class="card blog-card">
+  <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+    {{ with .Params.image }}
+      {{ if fileExists (add `assets/` .) }}
+        {{ partial "image.html" (dict "Src" . "Alt" "blog-post" "Class" "card-img-top h-auto" "Size" "570x") }}
+      {{ else }}
+        {{ partial "image.html" (dict "Src" "https://via.placeholder.com/570x380.png/eee/eee" "Alt" "image-fallback" "Size"
+          "570x")
+        }}
+      {{ end }}
+    {{ end }}
+  </a>
+  <div class="card-body">
+    <h3 class="card-title">
+      <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+    </h3>
+    <p>{{ .Plain | truncate 120 }}</p>
+  </div>
+  {{ $publishDate := .PublishDate.Format "Jan 02, 2006" }}
+  {{ with site.GetPage (string .Params.Author | urlize | lower) }}
+    <div class="card-footer bg-transparent border-top-0">
+      <div class="card-author">
+        <div class="d-flex align-items-center">
+          <div class="user-image me-3">
+            <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+              {{ if .Params.image }}
+                {{ partial "image.html" (dict "Src" .Params.image "Alt" "avatar" "Class" "rounded-circle" "Size" "70x70") }}
+              {{ else if .Params.Email }}
+                {{ partial "image.html" (dict "Src" "https://www.gravatar.com/avatar/{{ md5 . }}?s=70&pg&d=identicon"
+                "Alt" "avatar" "Class" "rounded-circle") }}
+              {{ end }}
+            </a>
+          </div>
+          <div class="user-info">
+            <p class="fw-500 mb-0 h5">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </p>
+            <span
+              >{{ $publishDate }} - {{ .ReadingTime }}
+              {{ T `min_read` }}</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</article>

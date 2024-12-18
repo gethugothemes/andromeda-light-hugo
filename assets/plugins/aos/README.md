@@ -3,7 +3,7 @@
 [![NPM version](https://img.shields.io/npm/v/aos.svg?style=flat)](https://npmjs.org/package/aos)
 [![NPM downloads](https://img.shields.io/npm/dm/aos.svg?style=flat)](https://npmjs.org/package/aos)
 [![Build Status](https://travis-ci.org/michalsnik/aos.svg?branch=master)](https://travis-ci.org/michalsnik/aos)
-[![Gitter](https://badges.gitter.im/michalsnik/aos.svg)](https://gitter.im/michalsnik/aos?utm_source=badge&utm_medium=badge&utm_campaign=pe-badge)
+[![Gitter](https://badges.gitter.im/michalsnik/aos.svg)](https://gitter.im/michalsnik/aos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/michalsnik.svg?style=social)](https://twitter.com/michalsnik) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/home?status=AOS%20-%20Animate%20on%20Scroll%20library%0Ahttps%3A//github.com/michalsnik/aos)
 
@@ -21,6 +21,7 @@ If you scroll back to top, elements will animate to it's previous state and are 
 ### 🚀 [Demo](http://michalsnik.github.io/aos/)
 
 ### 🌟 Codepen Examples
+
 - [Different build in animations](http://codepen.io/michalsnik/pen/WxNdvq)
 - [With anchor setting in use](http://codepen.io/michalsnik/pen/jrOYVO)
 - [With anchor-placement and different easing](http://codepen.io/michalsnik/pen/EyxoNm)
@@ -29,6 +30,7 @@ If you scroll back to top, elements will animate to it's previous state and are 
 ---
 
 ## ❗ Attention
+
 From version `2.0.0` attributes `aos` are no longer supported, always use `data-aos`.
 
 ## ⚙ Setup
@@ -37,29 +39,28 @@ From version `2.0.0` attributes `aos` are no longer supported, always use `data-
 
 - Using `bower`
 
-    ```bash
-      bower install aos --save
-    ```
+  ```bash
+    bower install aos --save
+  ```
 
 - Using `npm`
 
-    ```bash
-      npm install aos --save
-    ```
+  ```bash
+    npm install aos --save
+  ```
 
 - Direct download -> [click here](https://github.com/michalsnik/aos/archive/master.zip)
-
 
 ### Link styles
 
 ```html
-  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+<link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
 ```
 
 ### Add scripts
 
 ```html
-  <script src="bower_components/aos/dist/aos.js"></script>
+<script src="bower_components/aos/dist/aos.js"></script>
 ```
 
 AOS from version `1.2.0` is available as UMD module, so you can use it as AMD, Global, Node or ES6 module.
@@ -67,47 +68,46 @@ AOS from version `1.2.0` is available as UMD module, so you can use it as AMD, G
 ### Init AOS
 
 ```javascript
-  <script>
-    AOS.init();
-  </script>
+<script>AOS.init();</script>
 ```
 
 ## 🤔 How to use it?
 
 ### Basic usage
 
-  All you have to do is to add `data-aos` attribute to html element, like so:
+All you have to do is to add `data-aos` attribute to html element, like so:
 
 ```html
-  <div data-aos="animation_name">
+<div data-aos="animation_name"></div>
 ```
 
-  Script will trigger "animation_name" animation on this element, if you scroll to it.
+Script will trigger "animation_name" animation on this element, if you scroll to it.
 
-  [Down below](https://github.com/michalsnik/aos#-animations) is a list of all available animations for now :)
+[Down below](https://github.com/michalsnik/aos#-animations) is a list of all available animations for now :)
 
 ### 🔥 Advanced settings
 
 These settings can be set both on certain elements, or as default while initializing script (in options object without `data-` part).
 
-| Attribute | Description | Example value | Default value |
-|---------------------------|-------------|---------------|---------|
-| *`data-aos-offset`* | Change offset to trigger animations sooner or later (px) | 200 | 120 |
-| *`data-aos-duration`* | *Duration of animation (ms) | 600 | 400 |
-| *`data-aos-easing`* | Choose timing function to ease elements in different ways | ease-in-sine | ease |
-| *`data-aos-delay`* | Delay animation (ms) | 300 | 0 |
-| *`data-aos-anchor`* | Anchor element, whose offset will be counted to trigger animation instead of actual elements offset | #selector | null |
-| *`data-aos-anchor-placement`* | Anchor placement - which one position of element on the screen should trigger animation | top-center | top-bottom |
-| *`data-aos-once`* | Choose wheter animation should fire once, or every time you scroll up/down to element | true | false |
+| Attribute                     | Description                                                                                         | Example value | Default value |
+| ----------------------------- | --------------------------------------------------------------------------------------------------- | ------------- | ------------- |
+| _`data-aos-offset`_           | Change offset to trigger animations sooner or later (px)                                            | 200           | 120           |
+| _`data-aos-duration`_         | \*Duration of animation (ms)                                                                        | 600           | 400           |
+| _`data-aos-easing`_           | Choose timing function to ease elements in different ways                                           | ease-in-sine  | ease          |
+| _`data-aos-delay`_            | Delay animation (ms)                                                                                | 300           | 0             |
+| _`data-aos-anchor`_           | Anchor element, whose offset will be counted to trigger animation instead of actual elements offset | #selector     | null          |
+| _`data-aos-anchor-placement`_ | Anchor placement - which one position of element on the screen should trigger animation             | top-center    | top-bottom    |
+| _`data-aos-once`_             | Choose wheter animation should fire once, or every time you scroll up/down to element               | true          | false         |
 
-*Duration accept values from 50 to 3000, with step 50ms, it's because duration of animation is handled by css, and to not make css longer than it is already I created implementations only in this range. I think this should be good for almost all cases.
+\*Duration accept values from 50 to 3000, with step 50ms, it's because duration of animation is handled by css, and to not make css longer than it is already I created implementations only in this range. I think this should be good for almost all cases.
 
 If not, you may write simple CSS on your page that will add another duration option value available, for example:
 
 ```css
-  body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duration='4000']{
-    transition-duration: 4000ms;
-  }
+body[data-aos-duration="4000"] [data-aos],
+[data-aos][data-aos][data-aos-duration="4000"] {
+  transition-duration: 4000ms;
+}
 ```
 
 This code will add 4000ms duration available for you to set on AOS elements, or to set as global duration while initializing AOS script.
@@ -121,27 +121,38 @@ Down below you can find list of all anchor-placement options.
 #### Examples:
 
 ```html
-  <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-```
-```html
-  <div data-aos="flip-left" data-aos-delay="100" data-aos-anchor=".example-selector">
-```
-```html
-  <div data-aos="fade-up" data-aos-anchor-placement="top-center">
+<div
+  data-aos="fade-zoom-in"
+  data-aos-offset="200"
+  data-aos-easing="ease-in-sine"
+  data-aos-duration="600"
+></div>
 ```
 
+```html
+<div
+  data-aos="flip-left"
+  data-aos-delay="100"
+  data-aos-anchor=".example-selector"
+></div>
+```
+
+```html
+<div data-aos="fade-up" data-aos-anchor-placement="top-center"></div>
+```
 
 #### API
 
 AOS object is exposed as a global variable, for now there are three methods available:
 
-  * `init` - initialize AOS
-  * `refresh` - recalculate all offsets and positions of elements (called on window resize)
-  * `refreshHard` - reinit array with AOS elements and trigger `refresh` (called on DOM changes that are related to `aos` elements)
+- `init` - initialize AOS
+- `refresh` - recalculate all offsets and positions of elements (called on window resize)
+- `refreshHard` - reinit array with AOS elements and trigger `refresh` (called on DOM changes that are related to `aos` elements)
 
 Example execution:
+
 ```javascript
-  AOS.refresh();
+AOS.refresh();
 ```
 
 By default AOS is watching for DOM changes and if there are any new elements loaded asynchronously or when something is removed from DOM it calls `refreshHard` automatically. In browsers that don't support `MutationObserver` like IE you might need to call `AOS.refreshHard()` by yourself.
@@ -169,10 +180,10 @@ To do this, pass options object to `init()` function, like so:
 
 These settings can be set only in options object while initializing AOS.
 
-| Setting | Description | Example value | Default value |
-|---------------------------|-------------|---------------|---------|
-| *`disable`* | Condition when AOS should be disabled | mobile | false |
-| *`startEvent`* | Name of event, on which AOS should be initialized | exampleEvent | DOMContentLoaded |
+| Setting        | Description                                       | Example value | Default value    |
+| -------------- | ------------------------------------------------- | ------------- | ---------------- |
+| _`disable`_    | Condition when AOS should be disabled             | mobile        | false            |
+| _`startEvent`_ | Name of event, on which AOS should be initialized | exampleEvent  | DOMContentLoaded |
 
 ##### Disabling AOS
 
@@ -190,7 +201,7 @@ There are several options that you can use to fit AOS perfectly into your projec
 `mobile` (phones and tablets), `phone` or `tablet`. This will disable AOS on those certains devices. But if you want make your own condition, simple type your statement instead of device type name:
 
 ```javascript
-  disable: window.innerWidth < 1024
+disable: window.innerWidth < 1024;
 ```
 
 There is also posibility to pass a `function`, which should at the end return `true` or `false`:
@@ -216,83 +227,84 @@ If you don't want to initialize AOS on `DOMContentLoaded` event, you can pass yo
 
 **Important note:** If you set `startEvent: 'load'` it will add event listener on `window` instead of `document`.
 
-
 ### 👻 Animations
 
 There are serveral predefined animations you can use already:
 
-  * Fade animations:
-    * fade
-    * fade-up
-    * fade-down
-    * fade-left
-    * fade-right
-    * fade-up-right
-    * fade-up-left
-    * fade-down-right
-    * fade-down-left
+- Fade animations:
 
-  * Flip animations:
-    * flip-up
-    * flip-down
-    * flip-left
-    * flip-right
+  - fade
+  - fade-up
+  - fade-down
+  - fade-left
+  - fade-right
+  - fade-up-right
+  - fade-up-left
+  - fade-down-right
+  - fade-down-left
 
-  * Slide animations:
-    * slide-up
-    * slide-down
-    * slide-left
-    * slide-right
+- Flip animations:
 
-  * Zoom animations:
-    * zoom-in
-    * zoom-in-up
-    * zoom-in-down
-    * zoom-in-left
-    * zoom-in-right
-    * zoom-out
-    * zoom-out-up
-    * zoom-out-down
-    * zoom-out-left
-    * zoom-out-right
+  - flip-up
+  - flip-down
+  - flip-left
+  - flip-right
+
+- Slide animations:
+
+  - slide-up
+  - slide-down
+  - slide-left
+  - slide-right
+
+- Zoom animations:
+  - zoom-in
+  - zoom-in-up
+  - zoom-in-down
+  - zoom-in-left
+  - zoom-in-right
+  - zoom-out
+  - zoom-out-up
+  - zoom-out-down
+  - zoom-out-left
+  - zoom-out-right
 
 ### Anchor placement:
 
-  * top-bottom
-  * top-center
-  * top-top
-  * center-bottom
-  * center-center
-  * center-top
-  * bottom-bottom
-  * bottom-center
-  * bottom-top
-
+- top-bottom
+- top-center
+- top-top
+- center-bottom
+- center-center
+- center-top
+- bottom-bottom
+- bottom-center
+- bottom-top
 
 ### Easing functions:
 
 You can choose one of these timing function to animate elements nicely:
 
-  * linear
-  * ease
-  * ease-in
-  * ease-out
-  * ease-in-out
-  * ease-in-back
-  * ease-out-back
-  * ease-in-out-back
-  * ease-in-sine
-  * ease-out-sine
-  * ease-in-out-sine
-  * ease-in-quad
-  * ease-out-quad
-  * ease-in-out-quad
-  * ease-in-cubic
-  * ease-out-cubic
-  * ease-in-out-cubic
-  * ease-in-quart
-  * ease-out-quart
-  * ease-in-out-quart
+- linear
+- ease
+- ease-in
+- ease-out
+- ease-in-out
+- ease-in-back
+- ease-out-back
+- ease-in-out-back
+- ease-in-sine
+- ease-out-sine
+- ease-in-out-sine
+- ease-in-quad
+- ease-out-quad
+- ease-in-out-quad
+- ease-in-cubic
+- ease-out-cubic
+- ease-in-out-cubic
+- ease-in-quart
+- ease-out-quart
+- ease-in-out-quart
 
 ## ✌️ [Contributing](CONTRIBUTING.md)
 

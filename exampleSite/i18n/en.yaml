@@ -1,0 +1,53 @@
+- id: socials
+  translation: Socials
+
+- id: social_media
+  translation: Social Media
+
+- id: send_message
+  translation: Send Message
+
+- id: message
+  translation: Message
+
+- id: quick_links
+  translation: Quick Links
+
+- id: location_contact
+  translation: Location & Contact
+
+- id: recent_posts
+  translation: Recent Posts by
+
+- id: related_articles
+  translation: Related Articles
+
+- id: full_name
+  translation: Full Name
+
+- id: email
+  translation: Email Address
+
+- id: send_a_message
+  translation: Send A Message
+
+- id: your_message
+  translation: Your Message
+
+- id: phone
+  translation: Phone
+
+- id: contact_us
+  translation: Contact us
+
+- id: get_in_touch
+  translation: Get In Touch
+
+- id: form_thanks_message
+  translation: Thanks for your submission!
+
+- id: form_error_message
+  translation: Oops! There was a problem submitting your form
+
+- id: min_read
+  translation: Min read

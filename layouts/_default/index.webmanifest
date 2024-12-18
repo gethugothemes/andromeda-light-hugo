@@ -2,18 +2,22 @@
   "name": "{{site.Title}}",
   "short_name": "{{site.Title}}",
   "lang": "{{ site.LanguageCode | default `en-us` }}",
-  {{ with site.Params.variables.primary_color }}"theme_color": "{{.}}",{{ end }}
-  {{ with site.Params.variables.body_color }}"background_color": "{{.}}",{{ end }}
+  "display": "fullscreen",
+  "orientation" : "portrait",
+  "start_url": "{{ site.BaseURL | relLangURL }}?utm_source=web_app_manifest",
+  "background_color": "{{ site.Params.variables.body_color | default `#fff`}}",
+  "theme_color": "{{ site.Params.variables.color_primary | default `#000`}}",
 
   {{ $icon:= site.Params.favicon }}
+  {{ if $icon }}
   {{ if fileExists (add `assets/` $icon) }}
   {{ $icon:= resources.Get $icon }}
-  {{ $icon_48:= $icon.Resize "48x png" }}
-  {{ $icon_72:= $icon.Resize "72x png" }}
-  {{ $icon_96:= $icon.Resize "96x png" }}
-  {{ $icon_144:= $icon.Resize "144x png" }}
-  {{ $icon_192:= $icon.Resize "192x png" }}
-  {{ $icon_512:= $icon.Resize "512x png" }}
+  {{ $icon_48:= $icon.Resize "48x48 png" }}
+  {{ $icon_72:= $icon.Resize "72x72 png" }}
+  {{ $icon_96:= $icon.Resize "96x96 png" }}
+  {{ $icon_144:= $icon.Resize "144x144 png" }}
+  {{ $icon_192:= $icon.Resize "192x192 png" }}
+  {{ $icon_512:= $icon.Resize "512x512 png" }}
   "icons": [
     {
       "src": "{{$icon_48.RelPermalink}}",
@@ -38,15 +42,15 @@
     {
       "src": "{{$icon_192.RelPermalink}}",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "{{$icon_512.RelPermalink}}",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
+  ]
   {{ end }}
-  "display": "standalone",
-  "start_url": "{{ site.BaseURL | relLangURL }}?utm_source=web_app_manifest"
+  {{ end }}
 }

@@ -1,7 +1,7 @@
 {
   "name": "andromeda-light-hugo",
-  "version": "2.1.0",
-  "license": "MIT",
+  "version": "3.1.0",
+  "license": "UNLICENSED",
   "author": "gethugothemes",
   "scripts": {
     "dev": "hugo server",
@@ -13,15 +13,13 @@
     "update-modules": "node ./scripts/clearModules.js && hugo mod clean --all && hugo mod get -u ./... && hugo mod tidy",
     "project-setup": "node ./scripts/projectSetup.js",
     "theme-setup": "node ./scripts/themeSetup.js",
-    "update-theme": "node ./scripts/themeUpdate.js",
     "format": "prettier -w ."
   },
   "devDependencies": {
-    "prettier": "^3.1.1",
-    "postcss": "^8.4.33",
-    "postcss-cli": "^11.0.0",
-    "autoprefixer": "^10.4.16",
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "prettier-plugin-go-template": "0.0.15"
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-go-template": "0.0.13"
   }
 }

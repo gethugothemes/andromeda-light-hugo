@@ -1,16 +1,101 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+  <!-- checking blog -->
+  {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq
+    .Section "categories") (eq .Section "tags")
+  }}
+    <!-- strat of blog-details -->
+    <section class="section-sm pt-0">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-in">
+          <div class="col-lg-10 mb-5">
+            {{ with .Params.image }}
+              {{ partial "image.html" (dict "Src" . "Alt" "blog post" "Class" "w-100 rounded-3" "Size" "1020x") }}
+            {{ end }}
+          </div>
+          <div class="col-lg-8">
+            <div class="mb-5">
+              <h2>{{ .Title | markdownify }}</h2>
+              {{ $publishDate := .PublishDate.Format "Jan 02, 2006" }}
+              {{ with site.GetPage (string .Params.Author | urlize | lower) }}
+                <div class="d-flex align-items-center card-author mt-4">
+                  <div class="user-image me-3">
+                    <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+                      {{ if .Params.image }}
+                        {{ partial "image.html" (dict "Src" .Params.image "Alt" "author image" "Class" "rounded-circle" "Size" "70x70") }}
+                      {{ else if .Params.Email }}
+                        {{ partial "image.html" (dict "Src" "https://www.gravatar.com/avatar/{{ md5 . }}?s=70&pg&d=identicon"
+                        "Alt" "author image" "Class" "rounded-circle" "Size"
+                        "70x70") }}
+                      {{ end }}
+                    </a>
+                  </div>
+                  <div class="user-info">
+                    <p class="fw-500 mb-0 h5">
+                      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </p>
+                    <span
+                      >{{ $publishDate }} - {{ .ReadingTime }}
+                      {{ T `min_read` }}</span
+                    >
+                  </div>
+                </div>
+              {{ end }}
+            </div>
 
+            <div class="content">
+              {{ .Content }}
+            </div>
+          </div>
+          {{ if site.Config.Services.Disqus.Shortname }}
+            <div class="col-lg-8" data-aos="fade-in">
+              <!-- comments -->
+              <div class="mt-5">
+                {{ template "_internal/disqus.html" . }}
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+    <!-- end of blog-details -->
 
-  <section class="section-sm">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-10">
-          <div class="content">
-            {{ .Content }}
+    <!-- start of blog-section -->
+    <section class="section pt-5">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-in">
+          <div class="col-12">
+            <div class="section-title text-center">
+              <h2 class="title">{{ T `related_articles` }}</h2>
+            </div>
+          </div>
+
+          {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where
+            site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . )
+          }}
+          {{ range first 2 $related }}
+            <div class="col-lg-5">
+              {{ .Render "article" }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+    <!-- end of blog-section -->
+
+    <!-- regular page -->
+  {{ else }}
+    {{ partial "components/page-header.html" . }}
+    <section class="section-sm">
+      <div class="container-xxl">
+        <div class="row" data-aos="fade-in">
+          <div class="col-lg-10 mx-auto">
+            <div class="content">
+              {{ .Content }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  {{ end }}
+  <!-- /regular page -->
 {{ end }}

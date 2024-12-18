@@ -11,7 +11,6 @@
 
 <!-- JS Plugins + Main script -->
 {{ $scripts := slice }}
-{{ $scriptsLazy := slice }}
 {{ range site.Params.plugins.js }}
   {{ if findRE "^http" .link }}
     <script
@@ -19,28 +18,31 @@
       type="application/javascript"
       {{ .attributes | safeHTMLAttr }}></script>
   {{ else }}
-    {{ if not .lazy }}
-      {{ $scripts = $scripts | append (resources.Get .link) }}
-    {{ else }}
-      {{ $scriptsLazy = $scriptsLazy | append (resources.Get .link) }}
-    {{ end }}
+    {{ $scripts = $scripts | append (resources.Get .link) }}
   {{ end }}
 {{ end }}
 
 
 <!-- main script -->
-{{ $scripts = $scripts | append (resources.Get "js/script.js") }}
-{{ $scripts = $scripts | resources.Concat "js/scripts.js" }}
+{{ $scripts = $scripts | append (resources.Get "js/script.js" | minify) }}
+{{ $scripts = $scripts | resources.Concat "js/script.js" | minify | fingerprint "sha512" }}
+<script crossorigin="anonymous" defer="defer" integrity="{{ $scripts.Data.Integrity }}" type="application/javascript">{{$scripts.Content | safeJS}}</script>
 
-{{ if hugo.IsProduction }}
-  {{ $scripts = $scripts | minify | fingerprint }}
-{{ end }}
-
-{{/* scripts */}}
-<script
-  crossorigin="anonymous"
-  integrity="{{ $scripts.Data.Integrity }}"
-  src="{{ $scripts.RelPermalink }}"></script>
+<!-- font family -->
+{{ $pf:= site.Params.variables.font_primary }}
+{{ $sf:= site.Params.variables.font_secondary }}
+<script type="application/javascript">
+  WebFont.load({
+    google: {
+      api: 'https://fonts.googleapis.com/css2',
+      families: ['{{$pf | default `Lato:wght@400`}}{{if not $sf}}&display=swap{{end}}'{{with $sf}},'{{. | default `Lato:wght@400`}}&display=swap'{{end}}],
+      version: 2
+    },
+    active: () => {
+      sessionStorage.fontsLoaded = true
+    }
+  });
+</script>
 
 <!-- progressive web app -->
 {{ partialCached "pwa.html" . }}

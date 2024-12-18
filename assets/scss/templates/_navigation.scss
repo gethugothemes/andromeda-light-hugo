@@ -1,17 +1,17 @@
 // start header style
 .header-height-fix {
-  height: 117px;
+  height: 7.3rem;
 
   @include desktop {
-    height: 106px;
+    height: 6.625rem;
   }
 
   @include tablet {
-    height: 84px;
+    height: 5.25rem;
   }
-  @include mobile-xs {
-    height: 127px;
-  }
+  // @include mobile-xs {
+  //   height: 7.93rem;
+  // }
 }
 
 header {
@@ -19,23 +19,23 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 99999;
   background-color: $white;
-  padding: 30px 0;
-  transition: .15s ease-out;
+  padding: 1.8rem 0;
+  transition: 0.15s ease-out;
 
   @include tablet {
-    padding: 20px 0;
+    padding: 1.25rem 0;
   }
-  @include mobile-xs {
-    padding: 10px 0;
-  }
+  // @include mobile-xs {
+  //   padding: 0.625rem 0;
+  // }
 
   &.header-sticky-top {
-    padding: 17px 0;
-    box-shadow: 0px 4px 18px 0 rgba(32, 45, 73, 0.02);
+    padding: 1.06rem 0;
+    box-shadow: 0px 0.25rem 1.125rem 0 rgba(32, 45, 73, 0.02);
     @include mobile-xs {
-      padding: 5px 0 10px 0;
+      padding: 5px 0 0.625rem 0;
     }
   }
 
@@ -46,7 +46,13 @@ header {
   .navbar-brand {
     @include tablet {
       img {
-        height: 30px;
+        height: 1.8rem;
+        width: auto;
+      }
+    }
+    @include mobile-xs {
+      img {
+        height: 1.5rem;
       }
     }
   }
@@ -54,43 +60,65 @@ header {
   .navbar-light .navbar-toggler {
     border-color: transparent;
     padding: 0;
-    font-size: 36px;
     color: lighten($black, 13.33);
     border: 0;
+    transition: 0.3s ease;
     box-shadow: none;
-    transition: .3s ease;
+    .show {
+      display: none;
+    }
+    .hide {
+      display: block;
+    }
+    &[aria-expanded="true"] {
+      .show {
+        display: block;
+      }
+      .hide {
+        display: none;
+      }
+    }
 
     @include tablet {
-      font-size: 32px;
+      font-size: 2rem;
     }
 
     &:hover {
-      color: $primary-color;
+      color: $color-primary;
     }
   }
+
+  // @include mobile-xs {
+  //   .nav-controller {
+  //     width: 100%;
+  //     justify-content: space-between;
+  //     align-items: flex-end !important;
+  //   }
+  // }
 
   .nav-item {
     .nav-link {
       font-weight: 500;
-      font-size: 16px;
+      font-size: 1rem;
       color: lighten($black, 13.33) !important;
-      padding: 15px 17px !important;
+      padding: 0.9rem 1.06rem !important;
 
       @include desktop-lg {
-        padding: 15px 10px !important;
+        font-size: 0.9rem;
+        padding: 0.9rem 0.625rem !important;
       }
     }
 
     .nav-link:hover,
     &.active .nav-link {
-      color: $primary-color !important
+      color: $color-primary !important;
     }
     &.dropdown .nav-link::after {
       display: inline-block;
-      vertical-align: .255em;
+      vertical-align: 0.255em;
       content: "";
-      height: 9px;
-      width: 9px;
+      height: 0.56rem;
+      width: 0.56rem;
       border: 2px solid;
       border-left: 0;
       border-top: 0;
@@ -102,58 +130,58 @@ header {
   }
 
   .dropdown-menu {
-    height: auto !important;
     border: 0;
-    padding: 0 10px;
-    border-radius: 6px;
-    background-color: lighten($primary-color, 43);
-    border: 1px solid lighten($primary-color, 38);
+    padding: 0 0.625rem;
+    border-radius: 0.375rem;
+    background-color: rgba($color-primary, 0.05);
+    border: 1px solid rgba($color-primary, 0.05);
 
     li {
       &:first-child {
-        margin-top: 12px
+        margin-top: 0.75rem;
       }
 
       &:last-child {
-        margin-bottom: 12px
+        margin-bottom: 0.75rem;
       }
     }
 
     .dropdown-item {
-      padding: 8px 15px;
-      font-size: 14px;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.875rem;
       font-weight: 500;
       color: lighten($black, 13.33);
-      border-radius: 6px;
+      border-radius: 0.375rem;
 
       &:focus,
       &:hover,
       &:active {
-        color: $primary-color;
-        background-color: lighten($primary-color, 40);
+        color: $color-primary;
+        background-color: rgba($color-primary, 0.07);
       }
-      
+
       &.active {
-        color: $primary-color;
+        color: $color-primary;
         background-color: transparent;
         &:focus,
         &:hover,
         &:active {
-          background-color: lighten($primary-color, 40);
+          background-color: rgba($color-primary, 0.07);
         }
       }
     }
   }
 
-  @media (min-width:991px) {
+  @media (min-width: 991px) {
     .dropdown-menu {
       display: block;
       visibility: hidden;
-      width: 220px;
-      left: 50%;
+      width: 13.75rem;
+      left: 50% !important;
       transform: translate(-50%, -6px);
       z-index: 1;
       border: 0;
+      margin-top: 0px !important;
       background-color: transparent;
       &::after {
         position: absolute;
@@ -164,15 +192,15 @@ header {
         left: 0;
         background-color: $white;
         z-index: -1;
-        border-radius: 6px;
+        border-radius: 0.375rem;
         transition: 0.15s;
-        border: 1px solid lighten($primary-color, 38);
-        box-shadow: 0 15px 25px rgba($black, 0.1);
+        border: 1px solid rgba($color-primary, 0.3);
+        box-shadow: 0 0.9rem 1.56rem rgba($black, 0.1);
       }
       li {
-        transform: translateY(20px);
+        transform: translateY(1.25rem);
         opacity: 0;
-        transition: .1s;
+        transition: 0.1s;
       }
     }
 
@@ -186,13 +214,13 @@ header {
       li {
         opacity: 1;
         transform: translateY(0);
-        transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
       $base-time: 0.05;
-      $max-menu-item: 10;
+      $max-menu-item: 12;
       @for $i from 1 through $max-menu-item {
         li:nth-child(#{$i}) {
-          transition-delay: $i*$base-time+s;
+          transition-delay: $i * $base-time + s;
         }
       }
     }
@@ -200,30 +228,31 @@ header {
 
   @include desktop {
     .navbar-nav {
-      max-width: 300px;
-      max-height: 400px;
+      max-width: 18.75rem;
+      max-height: 25rem;
       overflow-y: auto;
       text-align: center;
-      padding-top: 30px;
+      padding-top: 1.8rem;
     }
 
     .navbar-right {
       text-align: center;
       margin-top: 5px;
-      padding-bottom: 10px;
+      padding-bottom: 0.625rem;
 
       select {
-        margin-bottom: 15px;
+        margin-bottom: 0.9rem;
       }
     }
 
     .dropdown-menu {
-      padding: 1px 15px;
+      padding: 1px 0.9rem;
       text-align: center;
+      height: initial !important;
     }
 
     .nav-item .nav-link {
-      padding: 5px 20px !important;
+      padding: 0.31rem 1.25rem !important;
     }
   }
 }

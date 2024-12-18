@@ -1,39 +1,32 @@
-<!-- 
-PROJECT: Andromeda Hugo
-VERSION: 2.0.0
-AUTHOR: Gethugothemes
-AUTHOR WEBSITE: https://gethugothemes.com
--->
 
-<!doctype html>
+
+<!DOCTYPE html>
 <html
-  itemscope
-  class="{{- if not site.Params.theme_switcher -}}
-    {{- site.Params.theme_default -}}
-  {{- end -}}"
   lang="{{ site.LanguageCode | default `en-US` }}"
+  itemscope
   itemtype="http://schema.org/WebPage">
   <head>
-    <!-- head (don't cache it) -->
     {{ partial "essentials/head.html" . }}
 
 
-    <!-- style (always cache it) -->
-    {{ partialCached "essentials/style.html" . }}
+    <!-- cache partial only in production -->
+    {{ if hugo.IsProduction }}
+      {{ partialCached "essentials/style.html" . }}
+    {{ else }}
+      {{ partial "essentials/style.html" . }}
+    {{ end }}
   </head>
 
   <body>
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
       {{ partialCached "preloader.html" . }}
+      {{ partial "essentials/header.html" . }}
       {{ partialCached "gtm-noscript.html" . }}
     {{ else }}
       {{ partial "preloader.html" . }}
+      {{ partial "essentials/header.html" . }}
     {{ end }}
-
-
-    <!-- header (don't cache it) -->
-    {{ partial "essentials/header.html" . }}
 
 
     <main>
@@ -42,11 +35,11 @@ AUTHOR WEBSITE: https://gethugothemes.com
 
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
-      {{ partialCached "essentials/footer.html" . }}
       {{ partialCached "essentials/script.html" . }}
+      {{ partialCached "essentials/footer.html" . }}
     {{ else }}
-      {{ partial "essentials/footer.html" . }}
       {{ partial "essentials/script.html" . }}
+      {{ partial "essentials/footer.html" . }}
     {{ end }}
   </body>
 </html>

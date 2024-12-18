@@ -1,0 +1,51 @@
+{{ define "main" }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-in">
+          <div class="pe-0 pe-lg-4 sticky-top" style="top:110px">
+            <figure>
+              {{ if and (.Params.image) (fileExists (add `assets/` .Params.image)) }}
+                {{ partial "image.html" (dict "Src" .Params.image "Alt" .Title "Class" `rounded-circle border border-3 border-primary mx-auto` "Size" "100x") }}
+              {{ else if .Params.Email }}
+                {{ partial "image.html" (dict "Src" "https://www.gravatar.com/avatar/{{ md5 . }}?s=70&pg&d=identicon"
+                "Alt" .Title "Class" "rounded-circle border-primary mx-auto"
+                "Size" "100x") }}
+              {{ end }}
+              <figcaption class="mt-4">
+                <h2 class="h3">{{ .Title }}</h2>
+              </figcaption>
+            </figure>
+            <div class="content">
+              {{ .Content }}
+            </div>
+            <ul class="social-links list-inline mb-0">
+              {{ range .Params.Social }}
+                <li class="list-inline-item">
+                  <a href="{{ .link | safeURL }}" title="{{ .name }}"
+                    ><i class="{{ .icon }}"></i
+                  ></a>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-8" data-aos="fade-in" data-aos-delay="100">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="h3">
+                {{ T `recent_posts` }}
+                <span class="text-primary">{{ .Title }}</span>
+              </h2>
+            </div>
+            {{ range where site.RegularPages ".Params.author" (.Title | urlize | lower) }}
+              <div class="col-md-6">
+                {{ .Render "article" }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
