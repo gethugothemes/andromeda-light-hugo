@@ -56,11 +56,14 @@ Featurees | [Andromeda LIght](https://github.com/gethugothemes/andromeda-light) 
 # clone the repository
 git clone git@github.com:gethugothemes/andromeda-light.git
 
+# setup project
+$ npm run project-setup
+
 # Install Dependencies
 npm install
 
 # Start local dev server
-$ npm run dev:example
+$ npm run dev
 ```
 
 Or Check out [Full Documentation](https://docs.gethugothemes.com/andromeda/?ref=github).

@@ -1,7 +1,7 @@
 {
   "name": "andromeda-light-hugo",
   "version": "3.1.0",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "gethugothemes",
   "scripts": {
     "dev": "hugo server",
