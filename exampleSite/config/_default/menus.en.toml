@@ -20,7 +20,6 @@ weight = 3
 [[main]]
 weight = 4
 name = "Pages"
-hasChildren = true
 
   [[main]]
   parent = "Pages"

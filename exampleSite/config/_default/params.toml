@@ -107,3 +107,10 @@ title = "Helping teams in the world with focus"
 content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin."
 button = "Buy Premium"
 button_link = "https://gethugothemes.com/products/andromeda/"
+
+# open remark comment
+# module: https://github.com/gethugothemes/hugo-modules/tree/master/components/open-remark
+[open_remark]
+enable = true
+site_key = "cmqnb3wd5000104kww7862ku4" # your site key from the OpenRemark dashboard
+embed_url = "https://open-remark.zeon.studio/embed.js"

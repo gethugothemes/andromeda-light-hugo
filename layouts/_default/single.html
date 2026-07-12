@@ -46,11 +46,11 @@
               {{ .Content }}
             </div>
           </div>
-          {{ if site.Config.Services.Disqus.Shortname }}
+          {{ if site.Params.open_remark.enable }}
             <div class="col-lg-8" data-aos="fade-in">
               <!-- comments -->
               <div class="mt-5">
-                {{ template "_internal/disqus.html" . }}
+                {{ partial "open-remark.html" . }}
               </div>
             </div>
           {{ end }}

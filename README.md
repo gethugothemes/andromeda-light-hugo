@@ -4,8 +4,8 @@
 
 
 <p align=center>
-  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.83.1" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.83.1&color=f00&logo=hugo" />
+  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.163.3" alt="Contributors">
+    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.163.3&color=f00&logo=hugo" />
   </a>
 
   <a href="https://github.com/gethugothemes/andromeda-light/blob/master/LICENSE">

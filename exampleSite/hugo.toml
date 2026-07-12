@@ -21,9 +21,6 @@ disableLanguages = [] # example: ["fr"] for disable french language. see https:/
 [services.googleAnalytics]
 ID = 'UA-123456-78' # see https://gohugo.io/templates/internal/#configure-google-analytics
 
-[services.disqus]
-shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
-
 
 ############################# Modules ############################
 [module]
@@ -65,7 +62,7 @@ home = ["HTML", "RSS", "WebAppManifest"]
 # See https://github.com/disintegration/imaging
 # Default JPEG or WebP quality setting. Default is 75.
 quality = 90
-resampleFilter = "lanczos"
+resampleFilter = "Lanczos"
 
 ############################# Caches ###############################
 [caches]
@@ -156,4 +153,8 @@ link = "plugins/cookie/cookie.js"
 [[params.plugins.js]]
 link = "plugins/webfont-loader/webfont-loader-2.min.js"
 [[params.plugins.js]]
-link = "plugins/glightbox.js"
+link = "plugins/gallery/glightbox.js"
+[[params.plugins.js]]
+link = "js/tab.js"
+[[params.plugins.js]]
+link = "js/accordion.js"

@@ -32,11 +32,13 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 
 @import 'notice';
 
-@import 'tabs';
+@import 'tab';
+
+@import 'accordion';
 
 // @import 'image';
 
-@import 'gallery';
+@import 'gallery-slider';
 
 @import 'toc';
 
